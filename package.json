@@ -1,0 +1,36 @@
+{
+  "name": "typographer.js",
+  "version": "1.0.0",
+  "description": "Apply typographic rules for a better typography on the web and web-based technologies",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npx babel src --watch --out-dir dist",
+    "build": "npx babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daformat/typographer.js.git"
+  },
+  "keywords": [
+    "typographer.js",
+    "typographer",
+    "typography",
+    "typographic",
+    "typographic rules",
+    "typo",
+    "typo.js",
+    "non-breaking space"
+  ],
+  "author": "Mathieu Jouhet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daformat/typographer.js/issues"
+  },
+  "homepage": "https://github.com/daformat/typographer.js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2"
+  }
+}
