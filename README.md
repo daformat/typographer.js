@@ -23,7 +23,7 @@ There are more than just these four types of spaces, you get the idea. Non-break
 
 Consider `251 °F`, wouldn't it be weird to have the unit on a separate line than the value? This is what non-breaking spaces are for. You want to use non-breaking spaces.
 
-## Different countries, different typographic rules.
+## Different countries, different typographic rules
 
 This is were it gets tricky, the rules differ across countries, and even in a given country, there can be more than one recommended style. By default, we'll focus on applying undisputed typographic rules, in a typical 80-20 approach.
 
@@ -44,6 +44,6 @@ This is were it gets tricky, the rules differ across countries, and even in a gi
 - `(` should have a regular space before and no space after.
 - `)` should have no space before and a regular space after.
 - `-` should have no space before nor after.
-- `— or –` should have a regular space outside and a non-breaking space inside when wrapping some text.
+- `—` (long) or `–` (medium) should have a regular space outside and a non-breaking space inside when wrapping some text.
 - `…` should have no space before and a regular space after.
 - `’` should have no space before nor after
