@@ -57,11 +57,20 @@ const rules = [
   }
 ];
 
-const typographer = str => {
-  for (const rule of rules) {
-    str = str.replace(rule.pattern, rule.replacement.text);
+const typographer = ({
+  locale = 'fr_FR',
+  string
+}) => {
+
+  // Filter applicable rules for given locale
+  const applicable_rules = rules.filter( r => {
+    return r.locales.indexOf(locale) !== -1;
+  })
+
+  for (const rule of applicable_rules) {
+    string = string.replace(rule.pattern, rule.replacement.text);
   }
-  return str;
+  return string;
 };
 
 export default typographer;
