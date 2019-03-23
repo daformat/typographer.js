@@ -8,7 +8,7 @@ This is very much a **work in progress** and you may not find it suitable for yo
 
 ## Why
 
-Typography is an art, as much as a science, that has been refined over the course of history. Relentlessly working to improve text legibility and flow, typographers across the world have devised a lot of rules that are mostly discarded on today's publication mediums. This module aims to correct this situation.
+Typography is an art, as much as a science, that has been refined over the course of history. Relentlessly working to improve text legibility and flow, typographers across the world have devised a lot of rules that are mostly discarded on today's publication mediums. This module aims to correct this situation.
 
 ## We're going to space
 
@@ -21,11 +21,11 @@ The very first motivation for this project is *spaces*, as you may know, there's
 
 There are more than just these four types of spaces, but you get the idea. Non-breaking spaces are really useful to prevent weird wrapping.
 
-Consider `451 °F`, wouldn't it be weird to have the unit on a separate line than the value? This is what non-breaking spaces are for. You want to use non-breaking spaces.
+Consider `451 °F`, wouldn't it be weird to have the unit on a separate line than the value? This is what non-breaking spaces are for. You want to use non-breaking spaces.
 
 ## Different countries, different typographic rules
 
-This is were it gets tricky, the rules differ across countries, and even in a given country, there can be more than one recommended style. By default, we'll focus on applying undisputed typographic rules, in a typical 80-20 approach.
+This is were it gets tricky, the rules differ across countries, and even in a given country, there can be more than one recommended style. By default, we'll focus on applying undisputed typographic rules, in a typical 80-20 approach.
 
 ### France
 
