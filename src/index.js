@@ -2,33 +2,56 @@ const rules = [
   {
     locales: ['fr_FR'],
     pattern: /(?<!(\s\.){1,2})\s*\.(?!(\s\.){1,2})/g,
-    replacement: '.'
+    replacement: {
+      text: '.',
+      html: '.'
+    }
   },
   {
     locales: ['fr_FR'],
     pattern: /\. \. \./g,
-    replacement: '.\u00a0.\u00a0.'
+    replacement: {
+      text: '.\u00a0.\u00a0.',
+      html: '.&nbsp;.&nbsp;.'
+    }
   },
   {
     locales: ['fr_FR'],
     pattern: /\s+(\.\s\.\s\.)/g,
-    replacement: ' $1'
+    replacement: {
+      text: ' $1',
+      html: ' $1'
+    }
   },
   {
     locales: ['fr_FR'],
     pattern: /\s+,/g,
-    replacement: ','
+    replacement: {
+      text: ',',
+      html: ','
+    }
   },
   {
     locales: ['fr_FR'],
     pattern: /\s*:/g,
-    replacement: '\u00a0:'
+    replacement: {
+      text: '\u00a0:',
+      html: '&nbsp;:'
+    }
+  },
+  {
+    locales: ['fr_FR'],
+    pattern: /\s*;/g,
+    replacement: {
+      text: '\u202f;',
+      html: '&#8239;'
+    }
   }
 ];
 
 const typographer = str => {
   for (const rule of rules) {
-    str = str.replace(rule.pattern, rule.replacement);
+    str = str.replace(rule.pattern, rule.replacement.text);
   }
   return str;
 };
