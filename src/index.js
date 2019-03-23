@@ -1,7 +1,10 @@
 const rules = [
   {
-    // replace space(s) before periods, except when ellipsis
-    locales: ['fr_FR'],
+    // replace space(s) before periods, except within ellipsis
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
     pattern: /(?<!(\s\.){1,2})\s*\.(?!(\s\.){1,2})/g,
     replacement: {
       text: '.',
@@ -10,7 +13,10 @@ const rules = [
   },
   {
     // use non-breaking spaces within spaced ellipsis
-    locales: ['fr_FR'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
     pattern: /\. \. \./g,
     replacement: {
       text: '.\u00a0.\u00a0.',
@@ -19,7 +25,10 @@ const rules = [
   },
   {
     // replace multiple spaces with a single space before ellipsis
-    locales: ['fr_FR'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
     pattern: /\s+(\.(\s|&nbsp;)?\.(\s|&nbsp;)?\.)/g,
     replacement: {
       text: ' $1',
@@ -28,7 +37,10 @@ const rules = [
   },
   {
     // remove any leading space before a comma
-    locales: ['fr_FR'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
     pattern: /\s+,/g,
     replacement: {
       text: ',',
@@ -38,7 +50,7 @@ const rules = [
   {
     // replace any amount of space(s) before a colon
     // with a non-breaking space
-    locales: ['fr_FR'],
+    locales: ['fr', 'fr_FR'],
     pattern: /\s*:/g,
     replacement: {
       text: '\u00a0:',
@@ -49,7 +61,7 @@ const rules = [
     // replace any amount of space(s) before a semicolon
     // with a narrow non-breaking space
     // We need to make sure we don't match the `;` on an html entity
-    locales: ['fr_FR'],
+    locales: ['fr', 'fr_FR'],
     pattern: /\s*(?<!&#?\w+);/g,
     replacement: {
       text: '\u202f;',
@@ -59,7 +71,7 @@ const rules = [
   {
     // replace any amount of space(s) before an ? or an !
     // with a narrow non-breaking space
-    locales: ['fr_FR'],
+    locales: ['fr', 'fr_FR'],
     pattern: /\s*([?!])/g,
     replacement: {
       text: '\u202f$1',
@@ -69,7 +81,10 @@ const rules = [
   {
     // replace any amount of wrapping space within « »
     // with a single narrow non-breaking space
-    locales: ['fr_FR'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
     pattern: /(«|&laquo;|&#x00AB;)\s*(.*?)\s*(»|&raquo;|&#x00BB;)/g,
     replacement: {
       text: '$1\u202f$2\u202f$3',
@@ -79,7 +94,10 @@ const rules = [
   {
     // replace any amount of wrapping space within ‹ ›
     // with a single narrow non-breaking space
-    locales: ['fr_FR'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
     pattern: /(‹|&lsaquo;|&#x2039;)\s*(.*?)\s*(›|&rsaquo;|&#x203A;)/g,
     replacement: {
       text: '$1\u202f$2\u202f$3',
@@ -88,7 +106,10 @@ const rules = [
   },
   {
     // remove any amount of wrapping space within “ ”
-    locales: ['fr_FR'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
     pattern: /(“|&ldquo;|&#x201C;)\s*(.*?)\s*(”|&rdquo;|&#x201D;)/g,
     replacement: {
       text: '$1$2$3',
@@ -97,7 +118,10 @@ const rules = [
   },
   {
     // remove any amount of wrapping space within ‘ ’
-    locales: ['fr_FR'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
     pattern: /(‘|&lsquo;|&#x2018;)\s*(.*?)\s*(’|&rsquo;|&#x2019;)/g,
     replacement: {
       text: '$1$2$3',
