@@ -73,6 +73,7 @@ const typographer = ({
 }) => {
 
   // Make sure we're using a valid output format
+  output_format = output_format.toLowerCase();
   if (
     output_format !== 'text' &&
     output_format !== 'html'
