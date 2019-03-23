@@ -1,3 +1,9 @@
+// We might want to use the new RegExp() constructor to simplify
+// the expressions involving spaces so we can match html entity
+// spaces too: (?:\s|&nbsp;|&thinsp;|&#8239;|&#x202f;|...)
+// otherwise it's going to be pretty verbose and difficult to
+// work with the expressions
+
 const rules = [
   {
     // replace space(s) before periods, except within ellipsis
