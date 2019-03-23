@@ -1,5 +1,6 @@
 const rules = [
   {
+    // replace space(s) before periods, except when ellipsis
     locales: ['fr_FR'],
     pattern: /(?<!(\s\.){1,2})\s*\.(?!(\s\.){1,2})/g,
     replacement: {
@@ -8,6 +9,7 @@ const rules = [
     }
   },
   {
+    // use non-breaking spaces within spaced ellipsis
     locales: ['fr_FR'],
     pattern: /\. \. \./g,
     replacement: {
@@ -16,6 +18,7 @@ const rules = [
     }
   },
   {
+    // replace multiple spaces with a single space before ellipsis
     locales: ['fr_FR'],
     pattern: /\s+(\.(\s|&nbsp;)\.(\s|&nbsp;)\.)/g,
     replacement: {
@@ -24,6 +27,7 @@ const rules = [
     }
   },
   {
+    // remove any leading space before a comma
     locales: ['fr_FR'],
     pattern: /\s+,/g,
     replacement: {
@@ -32,6 +36,8 @@ const rules = [
     }
   },
   {
+    // replace any amount of space(s) before a colon
+    // with a non-breaking space
     locales: ['fr_FR'],
     pattern: /\s*:/g,
     replacement: {
@@ -40,6 +46,8 @@ const rules = [
     }
   },
   {
+    // replace any amount of space(s) before a semicolon
+    // with a narrow non-breaking space
     // We need to make sure we don't match the `;` on an html entity
     locales: ['fr_FR'],
     pattern: /\s*(?<!&#?\w+);/g,
@@ -49,6 +57,8 @@ const rules = [
     }
   },
   {
+    // replace any amount of space(s) before an ? or an !
+    // with a narrow non-breaking space
     locales: ['fr_FR'],
     pattern: /\s*([?!])/g,
     replacement: {
@@ -57,11 +67,41 @@ const rules = [
     }
   },
   {
+    // replace any amount of wrapping space within « »
+    // with a single narrow non-breaking space
     locales: ['fr_FR'],
-    pattern: /([«‹])\s*(.*?)\s*([»›])/g,
+    pattern: /(«|&laquo;|&#x00AB;)\s*(.*?)\s*(»|&raquo;|&#x00BB;)/g,
     replacement: {
       text: '$1\u202f$2\u202f$3',
       html: '$1&#8239;$2&#8239;$3'
+    }
+  },
+  {
+    // replace any amount of wrapping space within ‹ ›
+    // with a single narrow non-breaking space
+    locales: ['fr_FR'],
+    pattern: /(‹|&lsaquo;|&#x2039;)\s*(.*?)\s*(›|&rsaquo;|&#x203A;)/g,
+    replacement: {
+      text: '$1\u202f$2\u202f$3',
+      html: '$1&#8239;$2&#8239;$3'
+    }
+  },
+  {
+    // remove any amount of wrapping space within “ ”
+    locales: ['fr_FR'],
+    pattern: /(“|&ldquo;|&#x201C;)\s*(.*?)\s*(”|&rdquo;|&#x201D;)/g,
+    replacement: {
+      text: '$1$2$3',
+      html: '$1$2$3'
+    }
+  },
+  {
+    // remove any amount of wrapping space within ‘ ’
+    locales: ['fr_FR'],
+    pattern: /(‘|&lsquo;|&#x2018;)\s*(.*?)\s*(’|&rsquo;|&#x2019;)/g,
+    replacement: {
+      text: '$1$2$3',
+      html: '$1$2$3'
     }
   }
 ];
