@@ -40,8 +40,17 @@ const rules = [
     }
   },
   {
+    // We need to make sure we don't match the `;` on an html entity
     locales: ['fr_FR'],
-    pattern: /\s*([;?!])/g,
+    pattern: /\s*(?<!&#?\w+);/g,
+    replacement: {
+      text: '\u202f;',
+      html: '&#8239;;'
+    }
+  },
+  {
+    locales: ['fr_FR'],
+    pattern: /\s*([?!])/g,
     replacement: {
       text: '\u202f$1',
       html: '&#8239;$1'
