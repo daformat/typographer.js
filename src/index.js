@@ -17,7 +17,7 @@ const rules = [
   },
   {
     locales: ['fr_FR'],
-    pattern: /\s+(\.\s\.\s\.)/g,
+    pattern: /\s+(\.(\s|&nbsp;)\.(\s|&nbsp;)\.)/g,
     replacement: {
       text: ' $1',
       html: ' $1'
