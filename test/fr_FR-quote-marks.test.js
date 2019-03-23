@@ -206,3 +206,39 @@ test('[html] Replace multiple spaces with narrow non-breaking space within embed
     })
   ).toBe('Bonjour «&#8239;monsieur ‹&#8239;typographer&#8239;›&#8239;»');
 });
+
+// English double quotes “”
+
+test('[text] Remove any amount of wrapping spaces within `“ ”`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'Bonjour “    typographer  ”'
+    })
+  ).toBe('Bonjour “typographer”');
+});
+
+// English simple quotes ‘’
+
+test('[text] Remove any amount of wrapping spaces within `‘ ’`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'Bonjour ‘    typographer  ’'
+    })
+  ).toBe('Bonjour ‘typographer’');
+});
+
+// English nested quotes “‘’”
+
+test('[text] Remove any amount of wrapping spaces within nested english quotes `“‘ ’”`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'Bonjour “   monsieur ‘  typographer   ’ ”'
+    })
+  ).toBe('Bonjour “monsieur ‘typographer’”');
+});
