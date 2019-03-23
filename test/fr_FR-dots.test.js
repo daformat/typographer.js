@@ -1,6 +1,6 @@
 import typographer from '../dist/index.js';
 
-test('Remove single space before `.`', () => {
+test('[text] Remove single space before `.`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -10,7 +10,7 @@ test('Remove single space before `.`', () => {
   ).toBe('Bonjour typographer.');
 });
 
-test('Remove multiple spaces before `.`', () => {
+test('[text] Remove multiple spaces before `.`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -20,7 +20,7 @@ test('Remove multiple spaces before `.`', () => {
   ).toBe('Bonjour typographer.');
 });
 
-test('Remove any type of space before `.`', () => {
+test('[text] Remove any type of space before `.`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -30,7 +30,7 @@ test('Remove any type of space before `.`', () => {
   ).toBe('Bonjour typographer.');
 });
 
-test('Remove any space before a single `.` in multiple sentences', () => {
+test('[text] Remove any space before a single `.` in multiple sentences', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -40,7 +40,7 @@ test('Remove any space before a single `.` in multiple sentences', () => {
   ).toBe('Bonjour typographer. Enchanté de faire votre connaissance.');
 });
 
-test('Remove any space before a single `.` even with numbers', () => {
+test('[text] Remove any space before a single `.` even with numbers', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -50,7 +50,7 @@ test('Remove any space before a single `.` even with numbers', () => {
   ).toBe('Bonjour typographer. Enchanté de faire votre connaissance. 1.2345');
 });
 
-test('Use non-breaking spaces for `. . .`', () => {
+test('[text] Use non-breaking spaces for `. . .`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -60,7 +60,17 @@ test('Use non-breaking spaces for `. . .`', () => {
   ).toBe('Bonjour typographer .\u00a0.\u00a0.');
 });
 
-test('Remove multiple spaces before `. . .`', () => {
+test('[html] Use non-breaking spaces for `. . .`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'html',
+      string: 'Bonjour typographer . . .'
+    })
+  ).toBe('Bonjour typographer .&nbsp;.&nbsp;.');
+});
+
+test('[text] Remove multiple spaces before `. . .`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -70,7 +80,17 @@ test('Remove multiple spaces before `. . .`', () => {
   ).toBe('Bonjour typographer .\u00a0.\u00a0.');
 });
 
-test('Keep `...` as is', () => {
+test('[html] Remove multiple spaces before `. . .`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'html',
+      string: 'Bonjour typographer  . . .'
+    })
+  ).toBe('Bonjour typographer .&nbsp;.&nbsp;.');
+});
+
+test('[text] Keep `...` as is', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -80,7 +100,7 @@ test('Keep `...` as is', () => {
   ).toBe('Bonjour typographer...');
 });
 
-test('Remove spaces before `...`', () => {
+test('[text] Remove spaces before `...`', () => {
   expect(
     typographer({
       locale: 'fr_FR',

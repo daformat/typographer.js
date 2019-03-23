@@ -1,6 +1,6 @@
 import typographer from '../dist/index.js';
 
-test('Remove single space before `,`', () => {
+test('[text] Remove single space before `,`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -10,7 +10,7 @@ test('Remove single space before `,`', () => {
   ).toBe('Bonjour typographer, enchanté de faire votre connaissance.');
 });
 
-test('Remove multiple spaces before `,`', () => {
+test('[text] Remove multiple spaces before `,`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
@@ -20,7 +20,7 @@ test('Remove multiple spaces before `,`', () => {
   ).toBe('Bonjour typographer, enchanté de faire votre connaissance.');
 });
 
-test('Remove any type of space before `,`', () => {
+test('[text] Remove any type of space before `,`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
