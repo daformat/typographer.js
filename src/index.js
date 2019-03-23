@@ -46,6 +46,14 @@ const rules = [
       text: '\u202f$1',
       html: '&#8239$1'
     }
+  },
+  {
+    locales: ['fr_FR'],
+    pattern: /([«‹])\s*(.*?)\s*([»›])/g,
+    replacement: {
+      text: '$1\u202f$2\u202f$3',
+      html: '$1&#8239$2&#8239$3'
+    }
   }
 ];
 
