@@ -39,13 +39,36 @@ This is were it gets tricky, the rules differ across countries, and even in a gi
 - `!` should have a narrow non-breaking space before, and a regular space after.
 - `«` should have a regular space before and a narrow non-breaking space after.
 - `»` should have a narrow non-breaking space before and a regular space after.
-- `“` should have a regular space before and no space after.
-- `”` should have no space before and a regular space after.
+- `“`, `‘` should have a regular space before and no space after.
+- `”`, `’` should have no space before and a regular space after.
 - `(` should have a regular space before and no space after.
 - `)` should have no space before and a regular space after.
 - `[` should have a regular space before and no space after.
 - `]` should have no space before and a regular space after.
 - `-` should have no space before nor after.
-- `—` (long) or `–` (medium) should have a regular space outside and a non-breaking space inside when paired around some text.
+- `—` (em, long) or `–` (en, medium) should have a regular space outside and a non-breaking space inside when paired around some text.
+- `…` should have no space before and a regular space after.
+- `’` should have no space before nor after
+
+### United Kingdom / United States
+
+#### Punctuation rules
+
+- `,` should have no space before, and a regular space after.
+- `.` should have no space before, and a regular space after.
+- `:` should have no space before, and a regular space after.
+- `;` should have no space before, and a regular space after.
+- `?` should have no space before, and a regular space after.
+- `!` should have no space before, and a regular space after.
+- `“`, `‘` should have a regular space before and no space after.
+- `”`, `’` should have no space before and a regular space after.
+- `«`, `‹` should have a regular space before and a narrow non-breaking space after.
+- `»`, `›` should have a narrow non-breaking space before and a regular space after.
+- `(` should have a regular space before and no space after.
+- `)` should have no space before and a regular space after.
+- `[` should have a regular space before and no space after.
+- `]` should have no space before and a regular space after.
+- `-` should have no space before nor after.
+- `—` (em, long) or `–` (en, medium) should have no space before nor after. The em dash should have a space before when used to indicate the source of a quotation.
 - `…` should have no space before and a regular space after.
 - `’` should have no space before nor after
