@@ -44,7 +44,7 @@ const rules = [
     pattern: /\s*([;?!])/g,
     replacement: {
       text: '\u202f$1',
-      html: '&#8239$1'
+      html: '&#8239;$1'
     }
   },
   {
@@ -52,7 +52,7 @@ const rules = [
     pattern: /([«‹])\s*(.*?)\s*([»›])/g,
     replacement: {
       text: '$1\u202f$2\u202f$3',
-      html: '$1&#8239$2&#8239$3'
+      html: '$1&#8239;$2&#8239;$3'
     }
   }
 ];
