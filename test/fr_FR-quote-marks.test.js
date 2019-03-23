@@ -6,6 +6,7 @@ test('Insert narrow non-breaking space within `«»`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
+      output_format: 'text',
       string: 'Bonjour «typographer»'
     })
   ).toBe('Bonjour «\u202ftypographer\u202f»');
@@ -15,6 +16,7 @@ test('Replace opening and closing regular spaces by narrow non-breaking space wi
   expect(
     typographer({
       locale: 'fr_FR',
+      output_format: 'text',
       string: 'Bonjour « typographer »'
     })
   ).toBe('Bonjour «\u202ftypographer\u202f»');
@@ -24,6 +26,7 @@ test('Replace opening and closing multiple spaces by narrow non-breaking space w
   expect(
     typographer({
       locale: 'fr_FR',
+      output_format: 'text',
       string: 'Bonjour «   typographer     »'
     })
   ).toBe('Bonjour «\u202ftypographer\u202f»');
@@ -33,6 +36,7 @@ test('Replace any type of opening and closing spaces by narrow non-breaking spac
   expect(
     typographer({
       locale: 'fr_FR',
+      output_format: 'text',
       string: 'Bonjour « \f\n\r\t\v\u00a0\u1680\u2000\u200a\u2028\u2029\u202f\u205f\u3000\ufefftypographer \f\n\r\t\v\u00a0\u1680\u2000\u200a\u2028\u2029\u202f\u205f\u3000\ufeff»'
     })
   ).toBe('Bonjour «\u202ftypographer\u202f»');
@@ -45,6 +49,7 @@ test('Insert narrow non-breaking space within `‹›`', () => {
   expect(
     typographer({
       locale: 'fr_FR',
+      output_format: 'text',
       string: 'Bonjour ‹typographer›'
     })
   ).toBe('Bonjour ‹\u202ftypographer\u202f›');
@@ -54,6 +59,7 @@ test('Replace opening and closing regular spaces by narrow non-breaking space wi
   expect(
     typographer({
       locale: 'fr_FR',
+      output_format: 'text',
       string: 'Bonjour ‹ typographer ›'
     })
   ).toBe('Bonjour ‹\u202ftypographer\u202f›');
@@ -63,6 +69,7 @@ test('Replace opening and closing multiple spaces by narrow non-breaking space w
   expect(
     typographer({
       locale: 'fr_FR',
+      output_format: 'text',
       string: 'Bonjour ‹   typographer     ›'
     })
   ).toBe('Bonjour ‹\u202ftypographer\u202f›');
@@ -72,6 +79,7 @@ test('Replace any type of opening and closing multiple spaces by narrow non-brea
   expect(
     typographer({
       locale: 'fr_FR',
+      output_format: 'text',
       string: 'Bonjour ‹ \f\n\r\t\v\u00a0\u1680\u2000\u200a\u2028\u2029\u202f\u205f\u3000\ufefftypographer \f\n\r\t\v\u00a0\u1680\u2000\u200a\u2028\u2029\u202f\u205f\u3000\ufeff›'
     })
   ).toBe('Bonjour ‹\u202ftypographer\u202f›');
