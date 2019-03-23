@@ -15,7 +15,7 @@ Typography is an art, as much as a science, that has been refined over the cours
 The very first motivation for this project is *spaces*, as you may know, there's more than just one type of spaces, we'll look at a few:
 
 - **regular space:** the most commonly used space, it's the one you get by pressing the space bar on your keyboard.
-- **non-breaking space:** `&nbsp;` similar to the regular space, but can't be broken across two lines when wrapping. The two words will always be on the same line.
+- **non-breaking space:** `&nbsp;` similar to the regular space, but can't be broken across two lines when wrapping. Both words (separated by a non-breaking space) will always end up on the same line.
 - **thin space:** `&thinsp;` is a space narrower than the regular space.
 - **narrow non-breaking space:** `&#8239;` is the same size as the thin space but can't be broken across two lines.
 
