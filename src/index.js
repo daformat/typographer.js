@@ -68,8 +68,8 @@ const rules = [
 
 const typographer = ({
   locale = 'fr_FR',
-  string,
-  output_format = 'text'
+  output_format = 'text',
+  string
 }) => {
 
   // Make sure we're using a valid output format
