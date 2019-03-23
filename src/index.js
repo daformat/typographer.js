@@ -41,10 +41,10 @@ const rules = [
   },
   {
     locales: ['fr_FR'],
-    pattern: /\s*;/g,
+    pattern: /\s*[;?!]/g,
     replacement: {
-      text: '\u202f;',
-      html: '&#8239;'
+      text: '\u202f$1',
+      html: '&#8239$1'
     }
   }
 ];
