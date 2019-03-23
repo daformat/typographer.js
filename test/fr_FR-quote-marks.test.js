@@ -164,3 +164,25 @@ test('[html] Replace any type of opening and closing multiple spaces by narrow n
     })
   ).toBe('Bonjour ‹&#8239;typographer&#8239;›');
 });
+
+// Multiple quotes embedded, french quotes
+
+test('[text] Insert narrow non-breaking space within embedded french quotes `«‹›»`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'Bonjour «monsieur ‹typographer›»'
+    })
+  ).toBe('Bonjour «\u202fmonsieur ‹\u202ftypographer\u202f›\u202f»');
+});
+
+test('[text] Replace multiple spaces with narrow non-breaking space within embedded french quotes `«‹›»`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'Bonjour « monsieur ‹   typographer  ›     »'
+    })
+  ).toBe('Bonjour «\u202fmonsieur ‹\u202ftypographer\u202f›\u202f»');
+});
