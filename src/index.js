@@ -59,8 +59,17 @@ const rules = [
 
 const typographer = ({
   locale = 'fr_FR',
-  string
+  string,
+  output_format = 'text'
 }) => {
+
+  // Make sure we're using a valid output format
+  if (
+    output_format !== 'text' &&
+    output_format !== 'html'
+  ) {
+    output_format = 'text';
+  }
 
   // Filter applicable rules for given locale
   const applicable_rules = rules.filter( r => {
@@ -71,7 +80,7 @@ const typographer = ({
   for (const rule of applicable_rules) {
     string = string.replace(
       rule.pattern,
-      rule.replacement.text
+      rule.replacement[output_format]
     );
   }
 
