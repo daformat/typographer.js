@@ -65,11 +65,16 @@ const typographer = ({
   // Filter applicable rules for given locale
   const applicable_rules = rules.filter( r => {
     return r.locales.indexOf(locale) !== -1;
-  })
+  });
 
+  // Apply each rule one after the other
   for (const rule of applicable_rules) {
-    string = string.replace(rule.pattern, rule.replacement.text);
+    string = string.replace(
+      rule.pattern,
+      rule.replacement.text
+    );
   }
+
   return string;
 };
 
