@@ -1,4 +1,5 @@
 # typographer.js
+![ready](https://img.shields.io/badge/Is%20it%20ready%20yet%3F-NO-red.svg)
 
 A module for applying time-tested typographic rules to your documents in order to improve legibility.
 
