@@ -122,7 +122,31 @@ const rules = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
-    pattern: /(‘|&lsquo;|&#x2018;)\s*(.*?)\s*(’|&rsquo;|&#x2019;)/g,
+    pattern: /(‘|&lsquo;|&#x2018;)(?:\s|&nbsp;|&thinsp;|&#8239;|&#x202f;)*(.*?)(?:\s|&nbsp;|&thinsp;|&#8239;|&#x202f;)*(’|&rsquo;|&#x2019;)/g,
+    replacement: {
+      text: '$1$2$3',
+      html: '$1$2$3'
+    }
+  },
+  {
+    // remove any amount of wrapping space within ( )
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
+    pattern: /(\()(?:\s|&nbsp;|&thinsp;|&#8239;|&#x202f;)*(.*?)(?:\s|&nbsp;|&thinsp;|&#8239;|&#x202f;)*(\))/g,
+    replacement: {
+      text: '$1$2$3',
+      html: '$1$2$3'
+    }
+  },
+  {
+    // remove any amount of wrapping space within [ ]
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
+    pattern: /(\[)(?:\s|&nbsp;|&thinsp;|&#8239;|&#x202f;)*(.*?)(?:\s|&nbsp;|&thinsp;|&#8239;|&#x202f;)*(\])/g,
     replacement: {
       text: '$1$2$3',
       html: '$1$2$3'
