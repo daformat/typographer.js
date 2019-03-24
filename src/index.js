@@ -178,7 +178,8 @@ const rules = [
     ],
     pattern: new RegExp(
       `(\\()${space}*(.*?)${space}*(\\))`,
-      'g',
+      'g'
+    ),
     replacement: {
       text: '$1$2$3',
       html: '$1$2$3'
@@ -191,7 +192,7 @@ const rules = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(\\[)${space}*(.*?)${space}*(\\])`;
+      `(\\[)${space}*(.*?)${space}*(\\])`,
       'g'
     ),
     replacement: {
