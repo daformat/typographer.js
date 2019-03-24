@@ -34,11 +34,14 @@
     "@babel/preset-env": "^7.4.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.3",
+    "eslint-plugin-jest": "^22.4.1",
     "jest": "^24.5.0"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
+    "plugins": ["jest"],
     "env": {
+      "jest/globals": true,
       "browser": true,
       "es6": true,
       "node": true
