@@ -20,7 +20,7 @@ The very first motivation for this project is *spaces*, as you may know, there�
 - **thin space:** `&thinsp;` is a space narrower than the regular space.
 - **narrow non-breaking space:** `&#8239;` is the same size as the thin space but can’t be broken across two lines.
 
-There are more than just these four types of spaces, but you get the idea. Non-breaking spaces are really useful to prevent weird wrapping.
+There are [more than just these four types of spaces](https://gist.github.com/daformat/950411857f01a9b39873ddd1b44d5813), but you get the idea. Non-breaking spaces are really useful to prevent weird wrapping.
 
 Consider `451 °F`, wouldn’t it be weird to have the unit on a separate line than the value? This is what non-breaking spaces are for. You want to use non-breaking spaces.
 
