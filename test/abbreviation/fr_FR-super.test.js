@@ -30,6 +30,16 @@ test('[text] Replace `1   ère` (multiple spaces between `1` and `ère`) with `1
   ).toBe('C’est la 1re fois pour moi.');
 });
 
+test('[text] Replace `1ÈRE` with `1re`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'C’est la 1ÈRE fois pour moi.'
+    })
+  ).toBe('C’est la 1re fois pour moi.');
+});
+
 test('[text] Replace `1<sup>ère<sup>` with `1<sup>re</sup>`', () => {
   expect(
     typographer({
