@@ -9,6 +9,9 @@ module.exports = {
     libraryTarget: 'umd',
     library: 'typographer'
   },
+  plugins: [
+    new CleanWebpackPlugin()
+  ],
   module: {
     rules: [
       {
