@@ -21,7 +21,7 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
     pattern: new RegExp(
-      `\\b1${space}*<sup( [^>]*)>ère</sup>\\b`,
+      `\\b1${space}*<sup( [^>]*)?>ère</sup>`,
       'g'
     ),
     replacement: {
