@@ -4,11 +4,13 @@ import abbreviation from './rules/abbreviation';
 // Concatenate rules
 const rules = [...punctuation, ...abbreviation];
 
-const typographer = ({
-  locale = 'fr_FR',
-  output_format = 'text',
-  string
-}) => {
+const typographer = (
+  input = '',
+  {
+    locale = 'fr_FR',
+    output_format = 'text',
+  }
+) => {
 
   // Make sure we're using a valid output format
   output_format = output_format.toLowerCase();
@@ -23,6 +25,13 @@ const typographer = ({
   const applicable_rules = rules.filter( r => {
     return r.locales.indexOf(locale) !== -1;
   });
+
+  // Test input type
+  // For the moment we only accept strings
+  let string = '';
+  if (typeof input === 'string') {
+    string = input;
+  }
 
   // Apply each rule one after the other
   for (const rule of applicable_rules) {
