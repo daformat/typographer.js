@@ -31,4 +31,8 @@ const abbreviation = [
   },
 ];
 
+for (const rule of abbreviation) {
+  rule.ruleset = 'abbreviation';
+}
+
 export default abbreviation

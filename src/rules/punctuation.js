@@ -195,4 +195,8 @@ const punctuation = [
   }
 ];
 
+for (const rule of punctuation) {
+  rule.ruleset = 'punctuation';
+}
+
 export default punctuation;
