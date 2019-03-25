@@ -39,3 +39,13 @@ test('[text] Replace `1<sup>ère<sup>` with `1<sup>re</sup>`', () => {
     })
   ).toBe('C’est la 1<sup>re</sup> fois pour moi.');
 });
+
+test('[text] Keep optionnal <sup> element properties when replacing `1<sup>ère<sup>` with `1<sup>re</sup>`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'C’est la 1<sup class="yo" id="lo">ère</sup> fois pour moi.'
+    })
+  ).toBe('C’est la 1<sup class="yo" id="lo">re</sup> fois pour moi.');
+});
