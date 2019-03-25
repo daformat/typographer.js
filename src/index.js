@@ -1,7 +1,8 @@
 import punctuation from './rules/punctuation';
+import abbreviation from './rules/abbreviation';
 
 // Concatenate rules
-const rules = [...punctuation];
+const rules = [...punctuation, ...abbreviation];
 
 const typographer = ({
   locale = 'fr_FR',
