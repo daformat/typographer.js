@@ -22,7 +22,7 @@ const abbreviation = [
     ],
     pattern: new RegExp(
       `\\b1${space}*<sup( [^>]*)?>ère</sup>`,
-      'g'
+      'gi'
     ),
     replacement: {
       text: '1<sup$1>re</sup>',
