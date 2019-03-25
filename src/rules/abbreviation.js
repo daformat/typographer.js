@@ -7,7 +7,7 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
     pattern: new RegExp(
-      `\\b1${space}*ère\\b`,
+      `\\b1${space}*[èe]re\\b`,
       'gi'
     ),
     replacement: {
@@ -21,7 +21,7 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
     pattern: new RegExp(
-      `\\b1${space}*<sup( [^>]*)?>ère</sup>`,
+      `\\b1${space}*<sup( [^>]*)?>[èe]re</sup>`,
       'gi'
     ),
     replacement: {
@@ -35,7 +35,7 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
     pattern: new RegExp(
-      `\\b(\\d+)${space}*ème`,
+      `\\b(\\d+)${space}*[èe]me`,
       'gi'
     ),
     replacement: {
@@ -49,7 +49,7 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
     pattern: new RegExp(
-      `\\b(\\d+)${space}*<sup( [^>]*)?>ème</sup>`,
+      `\\b(\\d+)${space}*<sup( [^>]*)?>[èe]me</sup>`,
       'gi'
     ),
     replacement: {
