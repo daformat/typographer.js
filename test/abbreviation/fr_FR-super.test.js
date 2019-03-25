@@ -59,3 +59,63 @@ test('[text] Keep optionnal <sup> element properties when replacing `1<sup>ère<
     })
   ).toBe('C’est la 1<sup class="yo" id="lo">re</sup> fois pour moi.');
 });
+
+test('[text] Replace `2ème` with `2e`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'C’est la 2ème fois pour moi.'
+    })
+  ).toBe('C’est la 2e fois pour moi.');
+});
+
+test('[text] Replace `2 ème` with `2e`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'C’est la 2 ème fois pour moi.'
+    })
+  ).toBe('C’est la 2e fois pour moi.');
+});
+
+test('[text] Replace `2   ème` (multiple spaces between `2` and `ème`) with `2e`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'C’est la 2    ème fois pour moi.'
+    })
+  ).toBe('C’est la 2e fois pour moi.');
+});
+
+test('[text] Replace `2ÈME` with `2e`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'C’est la 2ÈME fois pour moi.'
+    })
+  ).toBe('C’est la 2e fois pour moi.');
+});
+
+test('[text] Replace `2<sup>ème<sup>` with `2<sup>e</sup>`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'C’est la 2<sup>ème</sup> fois pour moi.'
+    })
+  ).toBe('C’est la 2<sup>e</sup> fois pour moi.');
+});
+
+test('[text] Keep optionnal <sup> element properties when replacing `2<sup>ème<sup>` with `2<sup>e</sup>`', () => {
+  expect(
+    typographer({
+      locale: 'fr_FR',
+      output_format: 'text',
+      string: 'C’est la 2<sup class="yo" id="lo">ème</sup> fois pour moi.'
+    })
+  ).toBe('C’est la 2<sup class="yo" id="lo">e</sup> fois pour moi.');
+});
