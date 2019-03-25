@@ -1,4 +1,4 @@
-import typographer from '../dist/typographer.umd';
+import typographer from '../../dist/typographer.umd';
 
 test('[text] Use narrow non-breaking space before `;`', () => {
   expect(

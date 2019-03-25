@@ -1,4 +1,4 @@
-import typographer from '../dist/typographer.umd';
+import typographer from '../../dist/typographer.umd';
 
 test('[text] Can format html strings', () => {
   expect(
