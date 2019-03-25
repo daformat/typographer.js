@@ -4,7 +4,7 @@
   "description": "Apply typographic rules for a better typography on the web and web-based technologies",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npx babel src --watch --out-dir dist",
+    "start": "webpack --watch",
     "build": "webpack",
     "test": "jest"
   },
