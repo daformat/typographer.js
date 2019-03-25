@@ -1,4 +1,4 @@
-import typographer from '../dist/index.js';
+import typographer from '../dist/typographer.umd';
 
 // «» - double french quote marks
 
