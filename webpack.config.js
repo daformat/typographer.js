@@ -7,6 +7,7 @@ module.exports = {
     filename: 'typographer.umd.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
+    libraryExport: 'default',
     library: 'typographer'
   },
   plugins: [
