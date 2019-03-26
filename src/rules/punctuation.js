@@ -1,4 +1,8 @@
-import {space} from '../helpers/regex';
+import {
+  space,
+  laquo, raquo, lsaquo, rsaquo,
+  ldquo, rdquo, lsquo, rsquo
+} from '../helpers/regex';
 
 const punctuation = [
   {
@@ -9,7 +13,13 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `${space}*(<[^>]+>)(?=(${space}*<[^>]+>)*${space}?[?!;:.,»›”’)\\]])`,
+      `${
+        space
+      }*(<[^>]+>)(?=(${
+        space
+      }*<[^>]+>)*${
+        space
+      }?([?!;:.,)\\]]|${raquo}|${rsaquo}|${rdquo}|${rsquo}))`,
       'g'
     ),
     replacement: {
@@ -48,7 +58,8 @@ const punctuation = [
     }
   },
   {
-    // replace multiple spaces with a single space before ellipsis
+    // replace multiple spaces with a single non-breaking space
+    // before ellipsis
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -58,8 +69,8 @@ const punctuation = [
       'g'
     ),
     replacement: {
-      text: ' $1',
-      html: ' $1'
+      text: '\u00a0$1',
+      html: '&nbsp;$1'
     }
   },
   {
@@ -125,11 +136,7 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(«|&laquo;|&#[xX]0{0,}[aA][bB];|&#0{0,}171;)${
-        space
-      }*(.*?)${
-        space
-      }*(»|&raquo;|&#[xX]0{0,}[bB][bB];|&#0{0,}187;)`,
+      `(${laquo})${space}*(.*?)${space}*(${raquo})`,
       'g'
     ),
     replacement: {
@@ -145,11 +152,7 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(‹|&lsaquo;|&#[xX]0{0,}2039;|&#0{0,}8249;)${
-        space
-      }*(.*?)${
-        space
-      }*(›|&rsaquo;|&#[xX]0{0,}203[aA];|&#0{0,}8250;)`,
+      `(${lsaquo})${space}*(.*?)${space}*(${rsaquo})`,
       'g'
     ),
     replacement: {
@@ -164,11 +167,7 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(“|&ldquo;|&#[xX]0{0,}201[cC];|&#{0,}8220;)${
-        space
-      }*(.*?)${
-        space
-      }*(”|&rdquo;|&#[xX]0{0,}201[dD];|&#{0,}8221;)`,
+      `(${ldquo})${space}*(.*?)${space}*(${rdquo})`,
       'g'
     ),
     replacement: {
@@ -183,11 +182,7 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(‘|&lsquo;|&#[xX]0{0,}2018;|&#0{0,}8216;)${
-        space
-      }*(.*?)${
-        space
-      }*(’|&rsquo;|&#[xX]0{0,}2019;|&#0{0,}8217;)`,
+      `(${lsquo})${space}*(.*?)${space}*(${rsquo})`,
       'g'
     ),
     replacement: {
