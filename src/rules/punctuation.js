@@ -148,7 +148,11 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(“|&ldquo;|&#x201C;)${space}*(.*?)${space}*(”|&rdquo;|&#x201D;)`,
+      `(“|&ldquo;|&#x0{0,}201C;|&#{0,}8220;)${
+        space
+      }*(.*?)${
+        space
+      }*(”|&rdquo;|&#x0{0,}201D;|&#x{0,}201c;)`,
       'g'
     ),
     replacement: {
@@ -163,7 +167,11 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(‘|&lsquo;|&#x2018;)${space}*(.*?)${space}*(’|&rsquo;|&#x2019;)`,
+      `(‘|&lsquo;|&#x0{0,}2018;|&#0{0,}8216;)${
+        space
+      }*(.*?)${
+        space
+      }*(’|&rsquo;|&#x0{0,}2019;|&#0{0,}8217;)`,
       'g'
     ),
     replacement: {
