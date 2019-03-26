@@ -2,6 +2,22 @@ import {space} from '../helpers/regex';
 
 const punctuation = [
   {
+    // remove spaces in between tags when preceding a closing
+    // punctuation sign
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+    ],
+    pattern: new RegExp(
+      `${space}*(<[^>]+>)(?=(${space}*<[^>]+>)*${space}?[?!;:.,»›”’)\\]])`,
+      'g'
+    ),
+    replacement: {
+      text: '$1',
+      html: '$1'
+    }
+  },
+  {
     // replace space(s) before periods, except within ellipsis
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
@@ -99,18 +115,6 @@ const punctuation = [
     replacement: {
       text: '\u202f$1',
       html: '&#8239;$1'
-    }
-  },
-  {
-    // remove spaces in between tags when preceding an ? or an !
-    locales: ['fr', 'fr_FR'],
-    pattern: new RegExp(
-      `${space}*(<[^>]+>)(?=(${space}*<[^>]+>)*${space}[?!])`,
-      'g'
-    ),
-    replacement: {
-      text: '$1',
-      html: '$1'
     }
   },
   {
