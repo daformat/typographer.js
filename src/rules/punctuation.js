@@ -109,11 +109,11 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(«|&laquo;|&#x0{0,}AB;|&#0{0,}171;)${
+      `(«|&laquo;|&#[xX]0{0,}[aA][bB];|&#0{0,}171;)${
         space
       }*(.*?)${
         space
-      }*(»|&raquo;|&#x0{0,}BB;|&#0{0,}187;)`,
+      }*(»|&raquo;|&#[xX]0{0,}[bB][bB];|&#0{0,}187;)`,
       'g'
     ),
     replacement: {
@@ -129,11 +129,11 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(‹|&lsaquo;|&#x0{0,}2039;|&#0{0,}8250;)${
+      `(‹|&lsaquo;|&#[xX]0{0,}2039;|&#0{0,}8250;)${
         space
       }*(.*?)${
         space
-      }*(›|&rsaquo;|&#x0{0,}203A;|&#0{0,}8249;)`,
+      }*(›|&rsaquo;|&#[xX]0{0,}203[aA];|&#0{0,}8249;)`,
       'g'
     ),
     replacement: {
@@ -148,11 +148,11 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(“|&ldquo;|&#x0{0,}201C;|&#{0,}8220;)${
+      `(“|&ldquo;|&#[xX]0{0,}201[cC];|&#{0,}8220;)${
         space
       }*(.*?)${
         space
-      }*(”|&rdquo;|&#x0{0,}201D;|&#x{0,}201c;)`,
+      }*(”|&rdquo;|&#[xX]0{0,}201[dD];|&#{0,}8221;)`,
       'g'
     ),
     replacement: {
@@ -167,11 +167,11 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(‘|&lsquo;|&#x0{0,}2018;|&#0{0,}8216;)${
+      `(‘|&lsquo;|&#[xX]0{0,}2018;|&#0{0,}8216;)${
         space
       }*(.*?)${
         space
-      }*(’|&rsquo;|&#x0{0,}2019;|&#0{0,}8217;)`,
+      }*(’|&rsquo;|&#[xX]0{0,}2019;|&#0{0,}8217;)`,
       'g'
     ),
     replacement: {
