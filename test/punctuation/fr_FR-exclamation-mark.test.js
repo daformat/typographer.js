@@ -83,3 +83,40 @@ test('[html] Replace any type of spaces before `!` with a single narrow non-brea
     )
   ).toBe('Bonjour typographer&#8239;!');
 });
+
+test('[text] Properly deal with html (1)', () => {
+  expect(
+    typographer(
+      'Bonjour <b>typographer</b>!',
+      {
+        locale: 'fr_FR',
+        output_format: 'text',
+      }
+    )
+  ).toBe('Bonjour <b>typographer</b>\u202f!')
+});
+
+test('[text] Properly deal with html (2)', () => {
+  expect(
+    typographer(
+      'Bonjour <b>typographer</b> !',
+      {
+        locale: 'fr_FR',
+        output_format: 'text',
+      }
+    )
+  ).toBe('Bonjour <b>typographer</b>\u202f!')
+});
+
+
+test('[text] Properly deal with html (3)', () => {
+  expect(
+    typographer(
+      'Bonjour <b>typographer </b>!',
+      {
+        locale: 'fr_FR',
+        output_format: 'text',
+      }
+    )
+  ).toBe('Bonjour <b>typographer</b>\u202f!')
+});
