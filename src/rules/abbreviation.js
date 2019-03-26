@@ -61,6 +61,36 @@ const abbreviation = [
       html: '$1<sup$2>e</sup>'
     }
   },
+  {
+    // etc... -> etc.
+    name: 'no-ellipsis-after-etc',
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
+    ],
+    pattern: new RegExp(
+      `\\betc\\.{2,}`,
+      'g'
+    ),
+    replacement: {
+      text: 'etc.',
+      html: 'etc.'
+    }
+  },
+  {
+    // No orphan etc.
+    name: 'no-orphan-etc',
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
+    ],
+    pattern: new RegExp(
+      `${space}+etc\\.`,
+      'g'
+    ),
+    replacement: {
+      text: '\u00a0etc.',
+      html: '&nbsp;etc.'
+    }
+  }
 ];
 
 for (const rule of abbreviation) {
