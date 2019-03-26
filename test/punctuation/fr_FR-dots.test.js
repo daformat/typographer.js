@@ -72,6 +72,18 @@ test('[text] Remove any space before a single `.` even with numbers', () => {
   ).toBe('Bonjour typographer. Enchanté de faire votre connaissance. 1.2345');
 });
 
+test('[html] Properly deal with html for periods', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b>typographer </b> </em> </u>.',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>.')
+});
+
 test('[text] Use non-breaking spaces for `. . .`', () => {
   expect(
     typographer(
@@ -81,7 +93,7 @@ test('[text] Use non-breaking spaces for `. . .`', () => {
         output_format: 'text'
       }
     )
-  ).toBe('Bonjour typographer .\u00a0.\u00a0.');
+  ).toBe('Bonjour typographer\u00a0.\u00a0.\u00a0.');
 });
 
 test('[html] Use non-breaking spaces for `. . .`', () => {
@@ -93,7 +105,19 @@ test('[html] Use non-breaking spaces for `. . .`', () => {
         output_format: 'html',
       }
     )
-  ).toBe('Bonjour typographer .&nbsp;.&nbsp;.');
+  ).toBe('Bonjour typographer&nbsp;.&nbsp;.&nbsp;.');
+});
+
+test('[html] Properly deal with html for spaced ellipsis', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b>typographer </b> </em> </u>. . .',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>.&nbsp;.&nbsp;.')
 });
 
 test('[text] Remove multiple spaces before `. . .`', () => {
@@ -105,7 +129,7 @@ test('[text] Remove multiple spaces before `. . .`', () => {
         output_format: 'text'
       }
     )
-  ).toBe('Bonjour typographer .\u00a0.\u00a0.');
+  ).toBe('Bonjour typographer\u00a0.\u00a0.\u00a0.');
 });
 
 test('[html] Remove multiple spaces before `. . .`', () => {
@@ -117,7 +141,7 @@ test('[html] Remove multiple spaces before `. . .`', () => {
         output_format: 'html',
       }
     )
-  ).toBe('Bonjour typographer .&nbsp;.&nbsp;.');
+  ).toBe('Bonjour typographer&nbsp;.&nbsp;.&nbsp;.');
 });
 
 test('[text] Keep `...` as is', () => {
@@ -142,4 +166,16 @@ test('[text] Remove spaces before `...`', () => {
       }
     )
   ).toBe('Bonjour typographer...');
+});
+
+test('[html] Properly deal with html for ellipsis', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b>typographer </b> </em> </u>...',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>...')
 });
