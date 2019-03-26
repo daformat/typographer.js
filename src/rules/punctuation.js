@@ -129,11 +129,11 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(‹|&lsaquo;|&#[xX]0{0,}2039;|&#0{0,}8250;)${
+      `(‹|&lsaquo;|&#[xX]0{0,}2039;|&#0{0,}8249;)${
         space
       }*(.*?)${
         space
-      }*(›|&rsaquo;|&#[xX]0{0,}203[aA];|&#0{0,}8249;)`,
+      }*(›|&rsaquo;|&#[xX]0{0,}203[aA];|&#0{0,}8250;)`,
       'g'
     ),
     replacement: {
