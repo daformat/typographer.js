@@ -70,7 +70,7 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `${space}+(\\.(${space}|&nbsp;)?\\.(${space}|&nbsp;)?\\.)`,
+      `${space}+(\\.${space}\\.${space}\\.)`,
       'g'
     ),
     replacement: {
