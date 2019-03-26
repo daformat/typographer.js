@@ -9,6 +9,7 @@ const punctuation = [
     // remove spaces in between tags when preceding a closing
     // punctuation sign, for example:
     // `... </b> </em> </u>.` -> `...</b></em></u>.`
+    name: 'no-trailing-tag-space-before-closing-punctuation',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -29,7 +30,8 @@ const punctuation = [
     }
   },
   {
-    // replace space(s) before periods, except within ellipsis
+    // remove space(s) before periods, except within ellipsis
+    name: 'no-space-before-period',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -45,6 +47,7 @@ const punctuation = [
   },
   {
     // use non-breaking spaces within spaced ellipsis
+    name: 'nbsp-within-spaced-ellipsis',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -60,7 +63,8 @@ const punctuation = [
   },
   {
     // replace multiple spaces with a single non-breaking space
-    // before ellipsis
+    // before spaced ellipsis
+    name: 'nbsp-before-spaced-ellipsis',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -76,6 +80,7 @@ const punctuation = [
   },
   {
     // remove any leading space before a comma
+    name: 'no-space-before-comma',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
     ],
@@ -91,6 +96,7 @@ const punctuation = [
   {
     // remove any leading space before ?!;:,
     // (period is dealt with in another rule)
+    name: 'no-space-before-punctuation-other-than-period',
     locales: [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
@@ -106,6 +112,7 @@ const punctuation = [
   {
     // replace any amount of space(s) before a colon
     // with a non-breaking space
+    name: 'nbsp-before-colon',
     locales: ['fr', 'fr_FR'],
     pattern: new RegExp(
       `${space}*:`,
@@ -120,6 +127,7 @@ const punctuation = [
     // replace any amount of space(s) before a semicolon
     // with a narrow non-breaking space
     // We need to make sure we don't match the `;` on an html entity
+    name: 'narrow-nbsp-before-semicolon',
     locales: ['fr', 'fr_FR'],
     pattern: new RegExp(
       `${space}*(?<!&#?\\w+);`,
@@ -133,6 +141,7 @@ const punctuation = [
   {
     // replace any amount of space(s) (including 0) before an ? or an !
     // with a narrow non-breaking space
+    name: 'narrow-nbsp-before-interrogation-exclamation',
     locales: ['fr', 'fr_FR'],
     pattern: new RegExp(
       `${space}*([?!])`,
@@ -146,6 +155,7 @@ const punctuation = [
   {
     // replace any amount of wrapping space within « »
     // with a single narrow non-breaking space
+    name: 'narrow-nbsp-within-laquo-raquo',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -162,6 +172,7 @@ const punctuation = [
   {
     // replace any amount of wrapping space within ‹ ›
     // with a single narrow non-breaking space
+    name: 'narrow-nbsp-within-lsaquo-rsaquo',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -177,6 +188,7 @@ const punctuation = [
   },
   {
     // remove any amount of wrapping space within “ ”
+    name: 'no-space-within-ldquo-rdquo',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -192,6 +204,7 @@ const punctuation = [
   },
   {
     // remove any amount of wrapping space within ‘ ’
+    name: 'no-space-within-lsquo-rsquo',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -207,6 +220,7 @@ const punctuation = [
   },
   {
     // remove any amount of wrapping space within ( )
+    name: 'no-space-within-parentheses',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
@@ -222,6 +236,7 @@ const punctuation = [
   },
   {
     // remove any amount of wrapping space within [ ]
+    name: 'no-space-within-square-brackets',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
