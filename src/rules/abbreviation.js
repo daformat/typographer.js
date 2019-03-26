@@ -77,13 +77,13 @@ const abbreviation = [
     }
   },
   {
-    // No orphan etc.
+    // No orphan `etc.` - adds a non-breaking space before
     name: 'no-orphan-etc',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
     pattern: new RegExp(
-      `${space}+etc\\.`,
+      `(${space}+|\\b)etc\\.`,
       'g'
     ),
     replacement: {
