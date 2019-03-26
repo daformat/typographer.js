@@ -90,10 +90,10 @@ test('[text] Properly deal with html (1)', () => {
       'Bonjour <b>typographer</b>!',
       {
         locale: 'fr_FR',
-        output_format: 'text',
+        output_format: 'html',
       }
     )
-  ).toBe('Bonjour <b>typographer</b>\u202f!')
+  ).toBe('Bonjour <b>typographer</b>&#8239;!')
 });
 
 test('[text] Properly deal with html (2)', () => {
@@ -102,12 +102,11 @@ test('[text] Properly deal with html (2)', () => {
       'Bonjour <b>typographer</b> !',
       {
         locale: 'fr_FR',
-        output_format: 'text',
+        output_format: 'html',
       }
     )
-  ).toBe('Bonjour <b>typographer</b>\u202f!')
+  ).toBe('Bonjour <b>typographer</b>&#8239;!')
 });
-
 
 test('[text] Properly deal with html (3)', () => {
   expect(
@@ -115,8 +114,20 @@ test('[text] Properly deal with html (3)', () => {
       'Bonjour <b>typographer </b>!',
       {
         locale: 'fr_FR',
-        output_format: 'text',
+        output_format: 'html',
       }
     )
-  ).toBe('Bonjour <b>typographer</b>\u202f!')
+  ).toBe('Bonjour <b>typographer</b>&#8239;!')
+});
+
+test('[text] Properly deal with html (4)', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b>typographer </b> </em> </u>!',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>&#8239;!')
 });
