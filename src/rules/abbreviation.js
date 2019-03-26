@@ -3,6 +3,7 @@ import {space} from '../helpers/regex';
 const abbreviation = [
   {
     // 1re instead of 1ère
+    name: 'text-1re',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
@@ -17,6 +18,7 @@ const abbreviation = [
   },
   {
     // 1<sup>re</sup> instead of 1<sup>ère</sup>
+    name: 'html-1re',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
@@ -31,6 +33,7 @@ const abbreviation = [
   },
   {
     // 2|3|...e instead of 2|3|...ème
+    name: 'text-Xe',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
@@ -45,6 +48,7 @@ const abbreviation = [
   },
   {
     // 2|3|...<sup>e</sup> instead of 2|3|...<sup>ème</sup>
+    name: 'html-Xe',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
