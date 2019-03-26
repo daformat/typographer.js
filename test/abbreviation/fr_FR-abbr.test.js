@@ -35,3 +35,28 @@ test('[text] Disallow ellipsis after `etc` (3)', () => {
     )
   ).toBe('Pèche, pomme, poire\u00a0etc.');
 });
+
+
+test('[html] Prevent orphan `etc`', () => {
+  expect(
+    typographer(
+      'Pèche, pomme, <b>poire</b> etc.',
+      {
+        locale: 'fr_FR',
+        output_format: 'html'
+      }
+    )
+  ).toBe('Pèche, pomme, <b>poire</b>&nbsp;etc.');
+});
+
+test('[html] Prevent orphan `etc`', () => {
+  expect(
+    typographer(
+      'Pèche, <em>pomme, <b>poire </b> </em>etc.',
+      {
+        locale: 'fr_FR',
+        output_format: 'html'
+      }
+    )
+  ).toBe('Pèche, <em>pomme, <b>poire</b></em>&nbsp;etc.');
+});
