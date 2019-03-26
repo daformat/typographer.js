@@ -7,7 +7,8 @@ import {
 const punctuation = [
   {
     // remove spaces in between tags when preceding a closing
-    // punctuation sign
+    // punctuation sign, for example:
+    // `... </b> </em> </u>.` -> `...</b></em></u>.`
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
