@@ -93,12 +93,12 @@ const punctuation = [
     // with a narrow non-breaking space
     locales: ['fr', 'fr_FR'],
     pattern: new RegExp(
-      `${space}*([?!])`,
+      `${space}*(<[^>]*>)?${space}*([?!])`,
       'g'
     ),
     replacement: {
-      text: '\u202f$1',
-      html: '&#8239;$1'
+      text: '$1\u202f$2',
+      html: '$1&#8239;$2'
     }
   },
   {
