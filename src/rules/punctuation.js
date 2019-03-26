@@ -35,7 +35,7 @@ const punctuation = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(?<!(${space}\\.){1,2})${space}*\\.(?!(${space}\\.){1,2})`,
+      `(?<!(${space}\\.){1,2})${space}+\\.(?!(${space}\\.){1,2})`,
       'g'
     ),
     replacement: {
