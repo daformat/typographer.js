@@ -232,6 +232,17 @@ test('[html] Replace any type of opening and closing multiple spaces by narrow n
   ).toBe('Bonjour ‹&#8239;typographer&#8239;›');
 });
 
+test('[text] Match `‹›` and corresponding html entities', () => {
+  expect(
+    typographer(
+      'Bonjour ‹typographer›, il existe &lsaquo;plusieurs&rsaquo; façons de &#x2039;représenter&#x203a; des &#8249;guillemets&#8250; en html, elles sont &#X02039;toutes&#x203A; &#008249;valides&#0008250;.',
+      {
+        locale: 'fr_FR',
+        output_format: 'text'
+      }
+    )
+  ).toBe('Bonjour ‹\u202ftypographer\u202f›, il existe &lsaquo;\u202fplusieurs\u202f&rsaquo; façons de &#x2039;\u202freprésenter\u202f&#x203a; des &#8249;\u202fguillemets\u202f&#8250; en html, elles sont &#X02039;\u202ftoutes\u202f&#x203A; &#008249;\u202fvalides\u202f&#0008250;.');
+});
 // Multiple quotes embedded, french quotes
 
 test('[text] Insert narrow non-breaking space within embedded french quotes `«‹›»`', () => {
