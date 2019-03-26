@@ -89,16 +89,28 @@ const punctuation = [
     }
   },
   {
-    // replace any amount of space(s) before an ? or an !
+    // replace any amount of space(s) (including 0) before an ? or an !
     // with a narrow non-breaking space
     locales: ['fr', 'fr_FR'],
     pattern: new RegExp(
-      `${space}*(<[^>]*>)?${space}*([?!])`,
+      `${space}*([?!])`,
       'g'
     ),
     replacement: {
-      text: '$1\u202f$2',
-      html: '$1&#8239;$2'
+      text: '\u202f$1',
+      html: '&#8239;$1'
+    }
+  },
+  {
+    // remove spaces in between tags when preceding an ? or an !
+    locales: ['fr', 'fr_FR'],
+    pattern: new RegExp(
+      `${space}*(<[^>]+>)(?=(${space}*<[^>]+>)*${space}[?!])`,
+      'g'
+    ),
+    replacement: {
+      text: '$1',
+      html: '$1'
     }
   },
   {
