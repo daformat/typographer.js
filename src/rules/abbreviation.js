@@ -90,6 +90,28 @@ const abbreviation = [
       text: '\u00a0etc.',
       html: '&nbsp;etc.'
     }
+  },
+  {
+    // remove spaces in between tags when preceding `etc.`
+    // `... </b> </em> </u>etc.` -> `...</b></em></u>etc.`
+    name: 'no-trailing-tag-space-before-etc.',
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
+    ],
+    pattern: new RegExp(
+      `${
+        space
+      }*(<[^>]+>)(?=(${
+        space
+      }*<[^>]+>)*${
+        space
+      }?(etc\\.))`,
+      'g'
+    ),
+    replacement: {
+      text: '$1',
+      html: '$1'
+    }
   }
 ];
 
