@@ -83,3 +83,15 @@ test('[html] Replace any type of spaces before `?` with a single narrow non-brea
     )
   ).toBe('Bonjour typographer, comment allez-vous&#8239;?');
 });
+
+test('[html] Properly deal with html for question mark', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher typographer, <b>comment allez-vous </b> </em> </u>?',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher typographer, <b>comment allez-vous</b></em></u>&#8239;?')
+});

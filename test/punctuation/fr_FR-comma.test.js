@@ -47,3 +47,15 @@ test('[text] Remove any space html entity before `,`', () => {
     )
   ).toBe('Bonjour typographer, enchanté de faire votre connaissance.');
 });
+
+test('[html] Properly deal with html for comma', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b>typographer </b> </em> </u>, enchanté <b>de faire votre connaissance</b>',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>, enchanté <b>de faire votre connaissance</b>')
+});

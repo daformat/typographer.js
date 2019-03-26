@@ -83,3 +83,15 @@ test('[html] Replace any type of spaces before `;` with a single narrow non-brea
     )
   ).toBe('Bonjour typographer&#8239;; enchanté de faire votre connaissance.');
 });
+
+test('[html] Properly deal with html for semicolon', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b>typographer </b> </em> </u>;',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>&#8239;;')
+});
