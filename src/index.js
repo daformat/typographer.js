@@ -9,7 +9,7 @@ const typographer = (
   {
     locale = 'en',
     output_format = 'text',
-  }
+  } = {}
 ) => {
 
   // Make sure we're using a valid output format
