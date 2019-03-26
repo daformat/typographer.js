@@ -7,7 +7,7 @@ const rules = [...punctuation, ...abbreviation];
 const typographer = (
   input = '',
   {
-    locale = 'fr_FR',
+    locale = 'en',
     output_format = 'text',
   }
 ) => {
