@@ -110,6 +110,17 @@ test('[html] Replace any type of opening and closing spaces by narrow non-breaki
   ).toBe('Bonjour «&#8239;typographer&#8239;»');
 });
 
+test('[text] Match `«»` and corresponding html entities', () => {
+  expect(
+    typographer(
+      'Bonjour «typographer», il existe &laquo;plusieurs&raquo; façons de &#xab;représenter&#xbb; des &#171;guillemets&#187; en html, elles sont &#X0aB;toutes&#x000Bb; &#0171;valides&#00187;.',
+      {
+        locale: 'fr_FR',
+        output_format: 'text'
+      }
+    )
+  ).toBe('Bonjour «\u202ftypographer\u202f», il existe &laquo;\u202fplusieurs\u202f&raquo; façons de &#xab;\u202freprésenter\u202f&#xbb; des &#171;\u202fguillemets\u202f&#187; en html, elles sont &#X0aB;\u202ftoutes\u202f&#x000Bb; &#0171;\u202fvalides\u202f&#00187;.');
+});
 
 // ‹› - single french quote marks
 
