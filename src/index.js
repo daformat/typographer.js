@@ -5,6 +5,7 @@ import composition from './rules/composition';
 // Concatenate rules
 const rules = [...punctuation, ...abbreviation, ...composition];
 
+// Find out if an object is an HTMLElement
 const isElement = o => {
   return (
     typeof HTMLElement === 'object' ?
@@ -13,6 +14,8 @@ const isElement = o => {
   );
 };
 
+// Disallowed nodes - those nodes won't be processed by typographer
+// Other type of nodes won't be processed if they **contain** one of these too
 const isDisallowed = node => {
   return (
     node.nodeName === 'PRE' ||
@@ -26,6 +29,8 @@ const isDisallowed = node => {
   );
 };
 
+// TreeWalker filter, exclude disallowed nodes, or nodes containing disallowed
+// children node types
 const filter = node => {
   if (isDisallowed(node)) {
     return NodeFilter.FILTER_SKIP;
@@ -41,6 +46,7 @@ const filter = node => {
   }
 };
 
+// Apply applicable_rules to string with output_format
 const apply_rules = (string, applicable_rules, output_format) => {
   // Apply each rule one after the other
   for (const rule of applicable_rules) {
@@ -52,6 +58,7 @@ const apply_rules = (string, applicable_rules, output_format) => {
   return string;
 };
 
+// Main function, this is what gets exported
 const typographer = (
   input = '',
   {
