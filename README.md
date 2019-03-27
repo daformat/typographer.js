@@ -1,11 +1,24 @@
 # typographer.js
 ![ready](https://img.shields.io/badge/Is%20it%20ready%20yet%3F-NO-red.svg)
+![license](https://img.shields.io/github/license/daformat/typographer.js.svg)
 
 A module for applying time-tested typographic rules to your documents in order to improve legibility.
 
 ## Disclaimer
 
 This is very much a **work in progress** and you may not find it suitable for your own needs. You can contribute in a lot of ways to improve this project: by submitting pull requests or simply documenting your country’s own typographic conventions.
+
+## Usage
+
+```
+const corrected = typographer(input, configuration);
+```
+
+`input` is a string.
+
+`configuration` is an object with the following optional properties:
+- `locale`: the language code to use.
+- `output_format`: either `text` or `html`.
 
 ## Why
 
