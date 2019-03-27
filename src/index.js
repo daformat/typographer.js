@@ -14,8 +14,9 @@ const isElement = o => {
   );
 };
 
-// Disallowed nodes - those nodes won't be processed by typographer
-// Other type of nodes won't be processed if they **contain** one of these too
+// Disallowed nodes - those nodes won't be processed themselves by typographer.
+// Other type of nodes won't be processed if they **contain** one of these.
+// But their children will, as long as they don't match this test.
 const isDisallowed = node => {
   return (
     node.nodeName === 'PRE' ||
