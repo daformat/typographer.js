@@ -10,7 +10,7 @@ This is very much a **work in progress** and you may not find it suitable for yo
 
 ## Usage
 
-```
+```js
 const corrected = typographer(input, configuration);
 ```
 
@@ -19,6 +19,7 @@ const corrected = typographer(input, configuration);
 `configuration` is an object with the following optional properties:
 - `locale`: the language code to use.
 - `output_format`: either `text` or `html`.
+- `disable_rules`: array of rules to disable ('ruleset/name').
 
 ## Why
 
