@@ -112,7 +112,7 @@ const typographer = (
         !nodeList[nodeList.length - 1].contains(treeWalker.currentNode)
       ) {
         nodeList.push(treeWalker.currentNode);
-        treeWalker.currentNode.innerHTML = process(
+        treeWalker.currentNode.innerHTML = apply_rules(
           treeWalker.currentNode.innerHTML,
           applicable_rules,
           output_format
