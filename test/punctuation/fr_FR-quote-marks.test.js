@@ -116,7 +116,8 @@ test('[text] Match `«»` and corresponding html entities', () => {
       'Bonjour «typographer», il existe &laquo;plusieurs&raquo; façons de &#xab;représenter&#xbb; des &#171;guillemets&#187; en html, elles sont &#X0aB;toutes&#x000Bb; &#0171;valides&#00187;.',
       {
         locale: 'fr_FR',
-        output_format: 'text'
+        output_format: 'text',
+        disable_rules: ['composition/no-orphan-short-words']
       }
     )
   ).toBe('Bonjour «\u202ftypographer\u202f», il existe &laquo;\u202fplusieurs\u202f&raquo; façons de &#xab;\u202freprésenter\u202f&#xbb; des &#171;\u202fguillemets\u202f&#187; en html, elles sont &#X0aB;\u202ftoutes\u202f&#x000Bb; &#0171;\u202fvalides\u202f&#00187;.');
@@ -238,7 +239,8 @@ test('[text] Match `‹›` and corresponding html entities', () => {
       'Bonjour ‹typographer›, il existe &lsaquo;plusieurs&rsaquo; façons de &#x2039;représenter&#x203a; des &#8249;guillemets&#8250; en html, elles sont &#X02039;toutes&#x203A; &#008249;valides&#0008250;.',
       {
         locale: 'fr_FR',
-        output_format: 'text'
+        output_format: 'text',
+        disable_rules: ['composition/no-orphan-short-words']
       }
     )
   ).toBe('Bonjour ‹\u202ftypographer\u202f›, il existe &lsaquo;\u202fplusieurs\u202f&rsaquo; façons de &#x2039;\u202freprésenter\u202f&#x203a; des &#8249;\u202fguillemets\u202f&#8250; en html, elles sont &#X02039;\u202ftoutes\u202f&#x203A; &#008249;\u202fvalides\u202f&#0008250;.');

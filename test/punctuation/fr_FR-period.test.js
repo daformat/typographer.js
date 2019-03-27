@@ -54,7 +54,8 @@ test('[text] Remove any space before a single `.` in multiple sentences', () => 
       'Bonjour typographer . Enchanté de faire votre connaissance .',
       {
         locale: 'fr_FR',
-        output_format: 'text'
+        output_format: 'text',
+        disable_rules: ['composition/no-orphan-short-words']
       }
     )
   ).toBe('Bonjour typographer. Enchanté de faire votre connaissance.');
@@ -66,7 +67,8 @@ test('[text] Remove any space before a single `.` even with numbers', () => {
       'Bonjour typographer . Enchanté de faire votre connaissance . 1 .2345',
       {
         locale: 'fr_FR',
-        output_format: 'text'
+        output_format: 'text',
+        disable_rules: ['composition/no-orphan-short-words']
       }
     )
   ).toBe('Bonjour typographer. Enchanté de faire votre connaissance. 1.2345');

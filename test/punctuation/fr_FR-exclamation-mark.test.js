@@ -18,7 +18,7 @@ test('[html] Use narrow non-breaking space before `!`', () => {
       'Bonjour typographer!',
       {
         locale: 'fr_FR',
-        output_format: 'html',
+        output_format: 'html'
       }
     )
   ).toBe('Bonjour typographer&#8239;!');
@@ -78,7 +78,7 @@ test('[html] Replace any type of spaces before `!` with a single narrow non-brea
       'Bonjour typographer \f\n\r\t\v\u00a0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000\ufeff!',
       {
         locale: 'fr_FR',
-        output_format: 'html',
+        output_format: 'html'
       }
     )
   ).toBe('Bonjour typographer&#8239;!');
@@ -90,7 +90,7 @@ test('[text] Properly deal with html (1)', () => {
       'Bonjour <b>typographer</b>!',
       {
         locale: 'fr_FR',
-        output_format: 'html',
+        output_format: 'html'
       }
     )
   ).toBe('Bonjour <b>typographer</b>&#8239;!')
@@ -102,7 +102,7 @@ test('[text] Properly deal with html (2)', () => {
       'Bonjour <b>typographer</b> !',
       {
         locale: 'fr_FR',
-        output_format: 'html',
+        output_format: 'html'
       }
     )
   ).toBe('Bonjour <b>typographer</b>&#8239;!')
@@ -114,7 +114,7 @@ test('[text] Properly deal with html (3)', () => {
       'Bonjour <b>typographer </b>!',
       {
         locale: 'fr_FR',
-        output_format: 'html',
+        output_format: 'html'
       }
     )
   ).toBe('Bonjour <b>typographer</b>&#8239;!')
@@ -126,7 +126,7 @@ test('[text] Properly deal with html (4)', () => {
       '<u>Bonjour <em>mon cher <b>typographer </b> </em> </u>!',
       {
         locale: 'fr_FR',
-        output_format: 'html',
+        output_format: 'html'
       }
     )
   ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>&#8239;!')
@@ -139,6 +139,7 @@ test('[text] Properly deal with html (5)', () => {
       {
         locale: 'fr_FR',
         output_format: 'html',
+        disable_rules: ['composition/no-orphan-short-words']
       }
     )
   ).toBe('<p>C’est le moins <em>que l’on <b>puisse dire</b></em>&#8239;!</p>')
