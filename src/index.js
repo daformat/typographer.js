@@ -1,8 +1,9 @@
 import punctuation from './rules/punctuation';
 import abbreviation from './rules/abbreviation';
+import composition from './rules/composition';
 
 // Concatenate rules
-const rules = [...punctuation, ...abbreviation];
+const rules = [...punctuation, ...abbreviation, ...composition];
 
 const typographer = (
   input = '',
