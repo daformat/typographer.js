@@ -10,6 +10,7 @@ const typographer = (
   {
     locale = 'en',
     output_format = 'text',
+    disable_rules
   } = {}
 ) => {
 
@@ -23,9 +24,16 @@ const typographer = (
   }
 
   // Filter applicable rules for given locale
-  const applicable_rules = rules.filter( r => {
+  let applicable_rules = rules.filter( r => {
     return r.locales.indexOf(locale) !== -1;
   });
+
+  // Disable specified rules
+  if (disable_rules) {
+    applicable_rules = applicable_rules.filter( r => {
+      return disable_rules.indexOf(`${r.ruleset}/${r.name}`) === -1;
+    });
+  }
 
   // Test input type
   // For the moment we only accept strings
