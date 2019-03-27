@@ -131,3 +131,15 @@ test('[text] Properly deal with html (4)', () => {
     )
   ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>&#8239;!')
 });
+
+test('[text] Properly deal with html (5)', () => {
+  expect(
+    typographer(
+      '<p>C’est le moins <em>que l’on <b>puisse dire </b>  </em>  !</p>',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<p>C’est le moins <em>que l’on <b>puisse dire</b></em>&#8239;!</p>')
+});
