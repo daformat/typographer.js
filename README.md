@@ -14,7 +14,7 @@ This is very much a **work in progress** and you may not find it suitable for yo
 const corrected = typographer(input, configuration);
 ```
 
-`input` is a string.
+`input` is a string or an element.
 
 `configuration` is an object with the following optional properties:
 - `locale`: the language code to use.
