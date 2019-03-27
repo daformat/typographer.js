@@ -21,7 +21,7 @@ const punctuation = [
         space
       }*<[^>]+>)*${
         space
-      }?([?!;:.,)\\]]|${raquo}|${rsaquo}|${rdquo}|${rsquo}))`,
+      }*([?!;:.,)\\]]|${raquo}|${rsaquo}|${rdquo}|${rsquo}))`,
       'g'
     ),
     replacement: {
