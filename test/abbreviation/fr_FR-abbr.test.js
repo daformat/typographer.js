@@ -52,7 +52,7 @@ test('[html] Prevent orphan `etc`', () => {
 test('[html] Prevent orphan `etc`', () => {
   expect(
     typographer(
-      'Pèche, <em>pomme, <b>poire </b> </em>etc.',
+      'Pèche, <em>pomme, <b>poire </b> </em> etc.',
       {
         locale: 'fr_FR',
         output_format: 'html'

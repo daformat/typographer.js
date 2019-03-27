@@ -83,7 +83,7 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
     pattern: new RegExp(
-      `(${space}+|\\b)etc\\.`,
+      `${space}+etc\\.`,
       'g'
     ),
     replacement: {
