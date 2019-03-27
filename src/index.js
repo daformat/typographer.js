@@ -24,6 +24,12 @@ const isDisallowed = node => {
     node.nodeName === 'KBD' ||
     node.nodeName === 'SAMP' ||
     node.nodeName === 'VAR' ||
+    node.nodeName === 'BDI' ||
+    node.nodeName === 'BDO' ||
+    node.nodeName === 'SAMP' ||
+    node.nodeName === 'TT' ||
+    node.nodeName === 'EMBED' ||
+    node.nodeName === 'OBJECT' ||
     node.nodeName === 'SCRIPT' ||
     node.nodeName === 'STYLE' ||
     node.nodeName === 'IFRAME'
