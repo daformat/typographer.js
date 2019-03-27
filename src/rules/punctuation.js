@@ -140,7 +140,7 @@ const punctuation = [
   },
   {
     // replace any amount of space(s) (including 0) before an ? or an !
-    // with a narrow non-breaking space
+    // with a narrow non-breaking space.
     name: 'narrow-nbsp-before-interrogation-exclamation',
     locales: ['fr', 'fr_FR'],
     pattern: new RegExp(
@@ -150,6 +150,22 @@ const punctuation = [
     replacement: {
       text: '\u202f$1',
       html: '&#8239;$1'
+    }
+  },
+  {
+    // DIRTY restore html coments that have been modified by
+    // narrow-nbsp-before-interrogation-exclamation rule
+    // TODO: find a way to improve the aforementionned rule
+    // so it doesn't match on html comments.
+    name: 'restore-html-comments',
+    locales: ['fr', 'fr_FR'],
+    pattern: new RegExp(
+      `<(?:\u202f|&#8239;)!--`,
+      'g'
+    ),
+    replacement: {
+      text: '<!--',
+      html: '<!--'
     }
   },
   {
