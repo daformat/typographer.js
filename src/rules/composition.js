@@ -1,3 +1,5 @@
+import {space} from '../helpers/regex';
+
 const composition = [
   {
     // Avoid short-words orphans
@@ -6,12 +8,12 @@ const composition = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'
     ],
     pattern: new RegExp(
-      ` (du|de|des|le|la|les|a|à|au|et|en|ou|où|on|y) `,
+      `(${space})(du|de|des|le|la|là|les|a|à|au|et|en|ou|où|on|y) `,
       'gi'
     ),
     replacement: {
-      text: ' $1\u00a0',
-      html: ' $1&nbsp;'
+      text: '$1$2\u00a0',
+      html: '$1$2&nbsp;'
     }
   }
 ];
