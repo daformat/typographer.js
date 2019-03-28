@@ -17,7 +17,7 @@ const punctuation = [
     pattern: new RegExp(
       `${
         space
-      }*(<[^>]+>)(?=(${
+      }*(<[^<>]+>)(?=(${
         space
       }*<[^>]+>)*${
         space
