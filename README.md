@@ -64,7 +64,7 @@ This is were it gets tricky, the rules differ across countries, and even in a gi
 - `]` should have no space before and a regular space after.
 - `-` should have no space before nor after.
 - `—` (em, long) or `–` (en, medium) should have a regular space outside and a non-breaking space inside when paired around some text.
-- `…`, `...`, or `. . .` should have no space before and a regular space after. Except when in between square brackets or parentheses where there should be no space before or after.
+- `…`, `...`, or `. . .` should have no space before and a regular space after. Except when in between square brackets or parentheses where there should be no space before nor after.
 - `’` should have no space before nor after
 
 ### United Kingdom / United States
