@@ -38,3 +38,16 @@ test('[html] Non-breaking space before `km`', () => {
     )
   ).toBe('Continuer sur 2&nbsp;km');
 });
+
+test('[html] Non-breaking space before `cm`', () => {
+  expect(
+    typographer(
+      'Mesurons 2cm',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+        disable_rules: ['composition']
+      }
+    )
+  ).toBe('Mesurons 2&nbsp;cm');
+});
