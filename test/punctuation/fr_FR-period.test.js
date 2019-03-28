@@ -86,6 +86,18 @@ test('[html] Properly deal with html for periods', () => {
   ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>.')
 });
 
+test('[html] Properly deal with html for periods', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b>typographer < </b> </em> </u>.',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b>typographer <</b></em></u>.')
+});
+
 test('[text] Use non-breaking spaces for `. . .`', () => {
   expect(
     typographer(
