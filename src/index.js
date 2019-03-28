@@ -6,9 +6,10 @@ import treeFilter from './helpers/treeFilter';
 import punctuation from './rules/punctuation';
 import abbreviation from './rules/abbreviation';
 import composition from './rules/composition';
+import unit from './rules/unit';
 
 // Concatenate rules
-const rules = [...punctuation, ...abbreviation, ...composition];
+const rules = [...punctuation, ...abbreviation, ...composition, ...unit];
 
 // Apply applicable_rules to string with output_format for replacements
 // returns modified string
