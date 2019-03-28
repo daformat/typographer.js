@@ -1,18 +1,13 @@
+// General imports
+import isElement from './helpers/isElement';
+
+// Rules
 import punctuation from './rules/punctuation';
 import abbreviation from './rules/abbreviation';
 import composition from './rules/composition';
 
 // Concatenate rules
 const rules = [...punctuation, ...abbreviation, ...composition];
-
-// Find out if an object is an HTMLElement
-const isElement = o => {
-  return (
-    typeof HTMLElement === 'object' ?
-      o instanceof HTMLElement :
-      o && typeof o === 'object' && o !== null && o.nodeType === 1 && typeof o.nodeName==='string'
-  );
-};
 
 // Disallowed nodes - those nodes won't be processed themselves by typographer.
 // Other type of nodes won't be processed if they **contain** one of these.
