@@ -50,7 +50,10 @@ const typographer = (
   // Disable specified rules
   if (disable_rules) {
     applicable_rules = applicable_rules.filter( r => {
-      return disable_rules.indexOf(`${r.ruleset}/${r.name}`) === -1;
+      return (
+        disable_rules.indexOf(`${r.ruleset}/${r.name}`) === -1 &&
+        disable_rules.indexOf(`${r.ruleset}`) === -1
+      );
     });
   }
 
