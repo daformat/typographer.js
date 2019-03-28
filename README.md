@@ -11,7 +11,7 @@ This is very much a **work in progress** and you may not find it suitable for yo
 ## Usage
 
 ```js
-const corrected = typographer(input, configuration);
+typographer(input, configuration);
 ```
 
 `input` is a string **or** an HTML element.
