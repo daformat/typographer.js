@@ -25,7 +25,10 @@ test('Calling typographer with a HTMLElement modifies the element in DOM', () =>
   const element = document.querySelector('#typographer');
 
   typographer(
-    element
+    element,
+    {
+      locale: 'en'
+    }
   );
 
   expect(
