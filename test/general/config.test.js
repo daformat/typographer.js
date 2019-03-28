@@ -15,3 +15,20 @@ test('Calling typographer with a string returns a string', () => {
     )
   ).toBe('string')
 })
+
+test('Calling typographer with a HTMLElement modifies the element in DOM', () => {
+  document.body.innerHTML =
+    '<div id="typographer">' +
+    '  <p>Bonjour typographer !</p>' +
+    '</div>';
+
+  const element = document.querySelector('#typographer');
+
+  typographer(
+    element
+  );
+
+  expect(
+    document.body
+  ).toMatchSnapshot()
+})

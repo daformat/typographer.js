@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calling typographer with a HTMLElement modifies the element in DOM 1`] = `
+<body>
+  <div
+    id="typographer"
+  >
+      
+    <p>
+      Bonjour typographer!
+    </p>
+  </div>
+</body>
+`;
