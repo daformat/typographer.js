@@ -21,7 +21,7 @@ const corrected = typographer(input, configuration);
 - `output_format`: either `text` or `html`.
 - `disable_rules`: array of rules to disable (e.g `['ruleset/name1', 'ruleset2/name2', ...]`).
 
-**Depending on the input type**, typographer will either return a string (when using a string input), or update the element and its descendants directly in the DOM.
+**Depending on the input type**, typographer will either return a string (when using a string input), or update the element and its descendants directly in the DOM.
 
 ## Why
 
