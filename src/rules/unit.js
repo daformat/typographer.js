@@ -2,8 +2,8 @@ import {space} from '../helpers/regex';
 
 const unit = [
   {
-    // Non breaking space before units
-    name: 'nbsp-before-unit',
+    // Non breaking space before temperature units
+    name: 'nbsp-before-unit-temperature',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
