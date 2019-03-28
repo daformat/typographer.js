@@ -1,5 +1,7 @@
 import {space} from '../helpers/regex';
 
+const number = '(?:\\d+(?:[.,]\\d+)?)';
+
 const unit = [
   {
     // Non breaking space before temperature units
@@ -9,7 +11,7 @@ const unit = [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
-      `(\\d+(?:[.,]\\d+)?)${space}*(°[CF])\\b`,
+      `(${number})${space}*(°[CF])\\b`,
       'g'
     ),
     replacement: {
