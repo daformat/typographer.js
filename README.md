@@ -57,6 +57,12 @@ const elements = document.querySelectorAll('.fixTypography')
 
 Typography is an art, as much as a science, that has been refined over the course of history. Relentlessly working to improve text legibility and flow, typographers across the world have devised a lot of rules that are mostly discarded on today’s publication mediums. This module aims to correct this situation.
 
+## Limitations
+
+This can never be perfect, for instance, the International System of Units specifies that the units should be preceded by a space (a non-breaking one), but it's rather difficult to make sure something is a unit. Some units can be very ambiguous.
+
+We'll add a non-breaking space on units which we're pretty sure of. And will leave it to you to do it for ambiguous ones.
+
 ## We’re going to space
 
 The very first motivation for this project is *spaces*, as you may know, there’s more than just one type of spaces, we’ll look at a few:
