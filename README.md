@@ -6,7 +6,7 @@ A module for applying time-tested typographic rules to your documents in order t
 
 ## Disclaimer
 
-This is very much a **work in progress** and you may not find it suitable for your own needs. You can contribute in a lot of ways to improve this project: by submitting pull requests or simply documenting your country’s own typographic conventions.
+This is very much a **work in progress** and you may not find it suitable for your own needs. You can contribute in a lot of ways to improve this project: by submitting pull requests, suggesting ideas, or documenting your country’s own typographic conventions.
 
 ## Usage
 
@@ -14,12 +14,14 @@ This is very much a **work in progress** and you may not find it suitable for yo
 const corrected = typographer(input, configuration);
 ```
 
-`input` is a string or an element.
+`input` is a string **or** an HTML element.
 
 `configuration` is an object with the following optional properties:
 - `locale`: the language code to use.
 - `output_format`: either `text` or `html`.
-- `disable_rules`: array of rules to disable ('ruleset/name').
+- `disable_rules`: array of rules to disable (e.g `['ruleset/name1', 'ruleset2/name2', ...]`).
+
+**Depending on the input type**, typographer will either return a string (when using a string input), or update the element and its descendants directly in the DOM.
 
 ## Why
 
