@@ -10,7 +10,7 @@ import composition from './rules/composition';
 // Concatenate rules
 const rules = [...punctuation, ...abbreviation, ...composition];
 
-// Apply applicable_rules to string with output_format
+// Apply applicable_rules to string with output_format for replacements
 // returns modified string
 const apply_rules = (string, applicable_rules, output_format) => {
   for (const rule of applicable_rules) {
