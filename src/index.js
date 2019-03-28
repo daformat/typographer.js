@@ -11,8 +11,8 @@ import composition from './rules/composition';
 const rules = [...punctuation, ...abbreviation, ...composition];
 
 // Apply applicable_rules to string with output_format
+// returns modified string
 const apply_rules = (string, applicable_rules, output_format) => {
-  // Apply each rule one after the other
   for (const rule of applicable_rules) {
     string = string.replace(
       rule.pattern,
