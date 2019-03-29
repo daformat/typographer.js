@@ -123,11 +123,25 @@ const punctuation = [
     // with a non-breaking space
     name: 'nbsp-before-colon',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
-      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC'
     ],
     pattern: new RegExp(
       `${space}*:`,
+      'g'
+    ),
+    replacement: {
+      text: '\u00a0:',
+      html: '&nbsp;:'
+    }
+  },
+  {
+    // remove any amount of space(s) before a colon
+    name: 'no-space-before-colon',
+    locales: [
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
+    ],
+    pattern: new RegExp(
+      `${space}+:`,
       'g'
     ),
     replacement: {
