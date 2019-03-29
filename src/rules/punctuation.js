@@ -98,15 +98,14 @@ const punctuation = [
     }
   },
   {
-    // remove any leading space before ?!;:,
-    // (period is dealt with in another rule)
-    name: 'no-space-before-punctuation-other-than-period',
+    // remove any leading space before ?!;:,.
+    name: 'no-space-before-punctuation',
     locales: [
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
-      `${space}+([?!;:,])`,
+      `${space}+([?!;:,.])`,
       'g'
     ),
     replacement: {
