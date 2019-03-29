@@ -1,7 +1,7 @@
 import {space} from '../helpers/regex';
 
 const number = '(?:\\d+(?:[.,]\\d+)?)';
-const prefix = '(?:[YZEPTGMkhdcmnpfa]|da|µ|&mu;|&#x3bc;|&#956;)';
+const prefix = '(?:[YZEPTGMkhdcmnpfazy]|da|µ|&mu;|&#x3bc;|&#956;)';
 
 const unit = [
   {
