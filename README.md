@@ -127,3 +127,61 @@ This is were it gets tricky, the rules differ across countries, and even in a gi
 - `—` (em, long) or `–` (en, medium) should have no space before nor after. The em dash should have a space before when used to indicate the source of a quotation.
 - `…`, `...`, or `. . .` can have regular spaces before and after, no space before and a regular space after, or a space before and no space after.
 - `’` should have no space before nor after.
+
+## Supported locales
+
+Most of the times you can simply use the general language code, but if you find the applied transformations incorrect, try using the specific locale code for your country. For example, canadian french uses different spacing rules for punctuation, so using `fr` in that context will most likely yields improper results.
+
+### English
+
+- `en` - general language code for english
+- `en_US` - United States
+- `en_GB` - United Kingdom
+- `en_CA` - Canada
+- `en_AU` - Australia
+- `en_NZ` - New Zealand
+- `en_IN` - India
+
+### French (français)
+
+- `fr` - general language code for french
+- `fr_FR` - France
+- `fr_BE` - Belgium
+- `fr_CA` - Canada
+- `fr_CH` - Swiss
+- `fr_LU` - Luxembourg
+- `fr_MC` - Monaco
+
+### German (deutsch)
+
+- `de` - general language code for german
+- `de_DE` - Germany
+- `de_AT` - Austria
+- `de_BE` - Belgium
+- `de_CH` - Swiss
+- `de_LI` - Liechtenstein
+- `de_LU` - Luxembourg
+
+### Spanish (español)
+
+- `es` - general language code for spanish
+- `es_ES` - Spain
+- `es_AR` - Argentina
+- `es_BO` - Bolivia
+- `es_CL` - Chile
+- `es_CO` - Colombia
+- `es_CR` - Costa Rica
+- `es_DO` - Dominican republic
+- `es_EC` - Ecuador
+- `es_SV` - El Salvador
+- `es_GT` - Guatemala
+- `es_HN` - Honduras
+- `es_MX` - Mexico
+- `es_NI` - Nicaragua
+- `es_PA` - Panama
+- `es_PY` - Paraguay
+- `es_PE` - Peru
+- `es_PR` - Puerto Rico
+- `es_UY` - Uruguay
+- `es_US` - United States
+- `es_VE` - Venezuela
