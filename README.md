@@ -130,7 +130,7 @@ This is were it gets tricky, the rules differ across countries, and even in a gi
 
 ## Supported locales
 
-Most of the times you can simply use the general language code, but if you find the applied transformations incorrect, try using the specific locale code for your country. For example, canadian french uses different spacing rules for punctuation, so using `fr` in that context will most likely yields improper results.
+Most of the times you can simply use the general language code, but if you find the applied transformations incorrect, try using the specific locale code for your country. For example, canadian french uses different spacing rules for punctuation, so using `fr` in that context will most likely yields improper results.
 
 ### English
 
