@@ -143,6 +143,45 @@ const punctuation = [
     }
   },
   {
+    // Remove spaces before semicolon
+    name: 'no-space-before-semicolon',
+    locales: ['fr_CA'],
+    pattern: new RegExp(
+      `${space}+;`,
+      'g'
+    ),
+    replacement: {
+      text: ';',
+      html: ';'
+    }
+  },
+  {
+    // Remove spaces before interrogation mark
+    name: 'no-space-before-interrogation',
+    locales: ['fr_CA'],
+    pattern: new RegExp(
+      `${space}+\\?`,
+      'g'
+    ),
+    replacement: {
+      text: '?',
+      html: '?'
+    }
+  },
+  {
+    // Remove spaces before exclamation mark
+    name: 'no-space-before-exclamation',
+    locales: ['fr_CA'],
+    pattern: new RegExp(
+      `${space}+!`,
+      'g'
+    ),
+    replacement: {
+      text: '!',
+      html: '!'
+    }
+  },
+  {
     // replace any amount of space(s) (including 0) before an ? or an !
     // with a narrow non-breaking space.
     name: 'narrow-nbsp-before-interrogation-exclamation',
