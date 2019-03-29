@@ -11,7 +11,7 @@ const punctuation = [
     // `... </b> </em> </u>.` -> `...</b></em></u>.`
     name: 'no-trailing-tag-space-before-closing-punctuation',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
@@ -35,7 +35,7 @@ const punctuation = [
     // remove space(s) before periods, except within ellipsis
     name: 'no-space-before-period',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
@@ -53,7 +53,7 @@ const punctuation = [
     // use non-breaking spaces within spaced ellipsis
     name: 'nbsp-within-spaced-ellipsis',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
@@ -72,7 +72,7 @@ const punctuation = [
     // before spaced ellipsis
     name: 'nbsp-before-spaced-ellipsis',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
@@ -106,7 +106,7 @@ const punctuation = [
     // remove any leading space before a comma
     name: 'no-space-before-comma',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
     pattern: new RegExp(
@@ -123,7 +123,7 @@ const punctuation = [
     // with a non-breaking space
     name: 'nbsp-before-colon',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
     pattern: new RegExp(
@@ -232,7 +232,7 @@ const punctuation = [
     // so it doesn't match on html comments.
     name: 'restore-html-comments',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
     ],
     pattern: new RegExp(
@@ -249,7 +249,7 @@ const punctuation = [
     // with a single narrow non-breaking space
     name: 'narrow-nbsp-within-laquo-raquo',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
@@ -267,7 +267,7 @@ const punctuation = [
     // with a single narrow non-breaking space
     name: 'narrow-nbsp-within-lsaquo-rsaquo',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
@@ -284,7 +284,7 @@ const punctuation = [
     // remove any amount of wrapping space within “ ”
     name: 'no-space-within-ldquo-rdquo',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
@@ -302,7 +302,7 @@ const punctuation = [
     // remove any amount of wrapping space within ‘ ’
     name: 'no-space-within-lsquo-rsquo',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
@@ -320,7 +320,7 @@ const punctuation = [
     // remove any amount of wrapping space within ( )
     name: 'no-space-within-parentheses',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
@@ -338,7 +338,7 @@ const punctuation = [
     // remove any amount of wrapping space within [ ]
     name: 'no-space-within-square-brackets',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'

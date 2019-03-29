@@ -8,7 +8,7 @@ const unit = [
     // Non breaking space before temperature units
     name: 'nbsp-before-unit-temperature',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
@@ -24,7 +24,7 @@ const unit = [
     // Non breaking space before distance units (metric)
     name: 'nbsp-before-unit-distance-metric',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
@@ -40,7 +40,7 @@ const unit = [
     // Non breaking space before distance units (metric) 2
     name: 'nbsp-before-unit-distance-metric-2',
     locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
     ],
     pattern: new RegExp(
