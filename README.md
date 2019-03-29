@@ -57,12 +57,6 @@ const elements = document.querySelectorAll('.fixTypography')
 });
 ```
 
-## Limitations
-
-This can never be perfect, for instance, the International System of Units specifies that the units should be preceded by a space (a non-breaking one), but it's rather difficult to make sure something is a unit. Some units can be very ambiguous (e.g. V for Volt, can also be the roman numeral for 5).
-
-We'll add a non-breaking space on units which we're pretty sure of. And will leave it to you to do it for ambiguous ones.
-
 ## We’re going to space
 
 The very first motivation for this project is *spaces*, as you may know, there’s more than just one type of spaces, we’ll look at a few:
@@ -75,6 +69,12 @@ The very first motivation for this project is *spaces*, as you may know, there�
 There are [more than just these four types of spaces](https://gist.github.com/daformat/950411857f01a9b39873ddd1b44d5813), but you get the idea. Non-breaking spaces are really useful to prevent weird wrapping.
 
 Consider `451 °F`, wouldn’t it be weird to have the unit on a separate line than the value? This is what non-breaking spaces are for. You want to use non-breaking spaces.
+
+## Limitations
+
+This can never be perfect, for instance, the International System of Units specifies that the units should be preceded by a space (a non-breaking one), but it's rather difficult to make sure something is a unit. Some units can be very ambiguous (e.g. V for Volt, can also be the roman numeral for 5).
+
+We'll add a non-breaking space on units which we're pretty sure of. And will leave it to you to do it for ambiguous ones.
 
 ## Different countries, different typographic rules
 
