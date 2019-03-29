@@ -10,7 +10,7 @@ This is very much a **work in progress** and you may not find it suitable for yo
 
 ## Why
 
-Typography is an art, as much as a science, that has been refined over the course of history. Relentlessly working to improve text legibility and flow, typographers across the world have devised a lot of rules that are mostly discarded on today’s publication mediums. This module aims to correct this situation.
+Typography is an art, as much as a science, that has been refined over the course of history. Relentlessly working to improve text legibility and flow, typographers across the world have devised a lot of rules that are often discarded on today’s publication mediums. This module aims to correct this situation.
 
 ## Usage
 
