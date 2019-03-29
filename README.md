@@ -8,6 +8,10 @@ A module for applying time-tested typographic rules to your documents in order t
 
 This is very much a **work in progress** and you may not find it suitable for your own needs. You can contribute in a lot of ways to improve this project: by submitting pull requests, suggesting ideas, or documenting your country’s own typographic conventions.
 
+## Why
+
+Typography is an art, as much as a science, that has been refined over the course of history. Relentlessly working to improve text legibility and flow, typographers across the world have devised a lot of rules that are mostly discarded on today’s publication mediums. This module aims to correct this situation.
+
 ## Usage
 
 ```js
@@ -52,10 +56,6 @@ const elements = document.querySelectorAll('.fixTypography')
   );
 });
 ```
-
-## Why
-
-Typography is an art, as much as a science, that has been refined over the course of history. Relentlessly working to improve text legibility and flow, typographers across the world have devised a lot of rules that are mostly discarded on today’s publication mediums. This module aims to correct this situation.
 
 ## Limitations
 
