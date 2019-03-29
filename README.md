@@ -82,7 +82,7 @@ This is were it gets tricky, the rules differ across countries, and even in a gi
 
 ### France / Belgium / Switzerland (french)
 
-**Note:** Canada uses [different rules](https://www.btb.termiumplus.gc.ca/tcdnstyl-chap?lang=eng&lettr=chapsect17&info0=17.07) for punctuation.
+**Note:** Canada (french) uses [different rules](https://www.btb.termiumplus.gc.ca/tcdnstyl-chap?lang=eng&lettr=chapsect17&info0=17.07) for punctuation.
 
 #### Punctuation rules
 
