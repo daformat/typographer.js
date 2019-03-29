@@ -12,7 +12,8 @@ const punctuation = [
     name: 'no-trailing-tag-space-before-closing-punctuation',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `${
@@ -34,7 +35,8 @@ const punctuation = [
     name: 'no-space-before-period',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `(?<!(${space}\\.){1,2})${space}+\\.(?!(${space}\\.){1,2})`,
@@ -50,7 +52,8 @@ const punctuation = [
     name: 'nbsp-within-spaced-ellipsis',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `\\.${space}\\.${space}\\.`,
@@ -67,7 +70,8 @@ const punctuation = [
     name: 'nbsp-before-spaced-ellipsis',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `${space}+(\\.${space}\\.${space}\\.)`,
@@ -98,7 +102,8 @@ const punctuation = [
     // (period is dealt with in another rule)
     name: 'no-space-before-punctuation-other-than-period',
     locales: [
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `${space}+([?!;:,])`,
@@ -207,7 +212,8 @@ const punctuation = [
     name: 'no-space-within-ldquo-rdquo',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `(${ldquo})${space}*(.*?)${space}*(${rdquo})`,
@@ -223,7 +229,8 @@ const punctuation = [
     name: 'no-space-within-lsquo-rsquo',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `(${lsquo})${space}*(.*?)${space}*(${rsquo})`,
@@ -239,7 +246,8 @@ const punctuation = [
     name: 'no-space-within-parentheses',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `(\\()${space}*(.*?)${space}*(\\))`,
@@ -255,7 +263,8 @@ const punctuation = [
     name: 'no-space-within-square-brackets',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
       `(\\[)${space}*(.*?)${space}*(\\])`,
