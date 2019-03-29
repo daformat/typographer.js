@@ -53,7 +53,7 @@ test('[html] Non-breaking space before °F', () => {
   ).toBe('La température normale du corps humain se situe entre 96,98&nbsp;°F et 100,04&nbsp;°F');
 });
 
-test('[html] Doesn’t add non-breaking on unknown units', () => {
+test('[html] Doesn’t add non-breaking space on unknown units', () => {
   expect(
     typographer(
       'Une valeur comprise en -42°CA et 42°FK',
