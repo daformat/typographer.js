@@ -20,7 +20,8 @@
     "typographic rules",
     "typo",
     "typo.js",
-    "non-breaking space"
+    "non-breaking space",
+    "orphans"
   ],
   "author": "Mathieu Jouhet",
   "license": "MIT",
