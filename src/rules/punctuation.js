@@ -210,6 +210,22 @@ const punctuation = [
     }
   },
   {
+    // replace any amount of space(s) (including 0) after an ¿ or an ¡
+    // with a single narrow non-breaking space.
+    name: 'narrow-nbsp-after-inverted-interrogation-exclamation',
+    locales: [
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
+    ],
+    pattern: new RegExp(
+      `([¿¡])${space}*`,
+      'g'
+    ),
+    replacement: {
+      text: '$1\u202f',
+      html: '$1&#8239;'
+    }
+  },
+  {
     // DIRTY restore html coments that have been modified by
     // narrow-nbsp-before-interrogation-exclamation rule
     // TODO: find a way to improve the aforementionned rule
