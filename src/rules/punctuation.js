@@ -13,6 +13,7 @@ const punctuation = [
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
@@ -36,6 +37,7 @@ const punctuation = [
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
@@ -52,6 +54,7 @@ const punctuation = [
     name: 'nbsp-within-spaced-ellipsis',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
@@ -70,6 +73,7 @@ const punctuation = [
     name: 'nbsp-before-spaced-ellipsis',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
@@ -80,21 +84,6 @@ const punctuation = [
     replacement: {
       text: '\u00a0$1',
       html: '&nbsp;$1'
-    }
-  },
-  {
-    // remove any leading space before a comma
-    name: 'no-space-before-comma',
-    locales: [
-      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-    ],
-    pattern: new RegExp(
-      `${space}+,`,
-      'g'
-    ),
-    replacement: {
-      text: ',',
-      html: ','
     }
   },
   {
@@ -114,10 +103,29 @@ const punctuation = [
     }
   },
   {
+    // remove any leading space before a comma
+    name: 'no-space-before-comma',
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
+    ],
+    pattern: new RegExp(
+      `${space}+,`,
+      'g'
+    ),
+    replacement: {
+      text: ',',
+      html: ','
+    }
+  },
+  {
     // replace any amount of space(s) before a colon
     // with a non-breaking space
     name: 'nbsp-before-colon',
-    locales: ['fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
+    ],
     pattern: new RegExp(
       `${space}*:`,
       'g'
@@ -132,7 +140,10 @@ const punctuation = [
     // with a narrow non-breaking space
     // We need to make sure we don't match the `;` on an html entity
     name: 'narrow-nbsp-before-semicolon',
-    locales: ['fr', 'fr_FR', 'fr_BE', 'fr_CH'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CH',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
+    ],
     pattern: new RegExp(
       `${space}*(?<!&#?\\w+);`,
       'g'
@@ -185,7 +196,10 @@ const punctuation = [
     // replace any amount of space(s) (including 0) before an ? or an !
     // with a narrow non-breaking space.
     name: 'narrow-nbsp-before-interrogation-exclamation',
-    locales: ['fr', 'fr_FR', 'fr_BE', 'fr_CH'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CH',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
+    ],
     pattern: new RegExp(
       `${space}*([?!])`,
       'g'
@@ -201,7 +215,10 @@ const punctuation = [
     // TODO: find a way to improve the aforementionned rule
     // so it doesn't match on html comments.
     name: 'restore-html-comments',
-    locales: ['fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'],
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
+    ],
     pattern: new RegExp(
       `<(?:\u202f|&#8239;)!--`,
       'g'
@@ -217,7 +234,8 @@ const punctuation = [
     name: 'narrow-nbsp-within-laquo-raquo',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
     pattern: new RegExp(
       `(${laquo})${space}*(.*?)${space}*(${raquo})`,
@@ -234,7 +252,8 @@ const punctuation = [
     name: 'narrow-nbsp-within-lsaquo-rsaquo',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
-      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN'
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
     pattern: new RegExp(
       `(${lsaquo})${space}*(.*?)${space}*(${rsaquo})`,
@@ -251,6 +270,7 @@ const punctuation = [
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
@@ -268,6 +288,7 @@ const punctuation = [
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
@@ -285,6 +306,7 @@ const punctuation = [
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
@@ -302,6 +324,7 @@ const punctuation = [
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH',
       'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
