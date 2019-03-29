@@ -80,7 +80,9 @@ Consider `451 °F`, wouldn’t it be weird to have the unit on a separate line
 
 This is were it gets tricky, the rules differ across countries, and even in a given country, there can be more than one recommended style. By default, we’ll focus on applying undisputed typographic rules, in a typical 80-20 approach.
 
-### France / Belgium / Canada (french) / Switzerland (french)
+### France / Belgium / Switzerland (french)
+
+**Note:** Canada uses [different rules](https://www.btb.termiumplus.gc.ca/tcdnstyl-chap?lang=eng&lettr=chapsect17&info0=17.07) for punctuation.
 
 #### Punctuation rules
 
