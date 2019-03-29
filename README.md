@@ -100,7 +100,7 @@ This is were it gets tricky, the rules differ across countries, and even in a gi
 - `)` should have no space before and a regular space after.
 - `[` should have a regular space before and no space after.
 - `]` should have no space before and a regular space after.
-- `-` should have no space before nor after.
+- `-` (hyphen) should have no space before nor after.
 - `—` (em, long) or `–` (en, medium) should have a regular space outside and a non-breaking space inside when paired around some text.
 - `…`, `...`, or `. . .` should have no space before and a regular space after. Except when in between square brackets or parentheses where there should be no space before nor after.
 - `’` should have no space before nor after
@@ -123,7 +123,7 @@ This is were it gets tricky, the rules differ across countries, and even in a gi
 - `)` should have no space before and a regular space after.
 - `[` should have a regular space before and no space after.
 - `]` should have no space before and a regular space after.
-- `-` should have no space before nor after.
+- `-` (hyphen) should have no space before nor after.
 - `—` (em, long) or `–` (en, medium) should have no space before nor after. The em dash should have a space before when used to indicate the source of a quotation.
 - `…`, `...`, or `. . .` can have regular spaces before and after, no space before and a regular space after, or a space before and no space after.
 - `’` should have no space before nor after
