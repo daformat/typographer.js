@@ -132,7 +132,7 @@ const punctuation = [
     // with a narrow non-breaking space
     // We need to make sure we don't match the `;` on an html entity
     name: 'narrow-nbsp-before-semicolon',
-    locales: ['fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'],
+    locales: ['fr', 'fr_FR', 'fr_BE', 'fr_CH'],
     pattern: new RegExp(
       `${space}*(?<!&#?\\w+);`,
       'g'
@@ -146,7 +146,7 @@ const punctuation = [
     // replace any amount of space(s) (including 0) before an ? or an !
     // with a narrow non-breaking space.
     name: 'narrow-nbsp-before-interrogation-exclamation',
-    locales: ['fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH'],
+    locales: ['fr', 'fr_FR', 'fr_BE', 'fr_CH'],
     pattern: new RegExp(
       `${space}*([?!])`,
       'g'
