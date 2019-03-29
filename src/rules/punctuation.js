@@ -1,5 +1,5 @@
 import {
-  space,
+  space, tag,
   laquo, raquo, lsaquo, rsaquo,
   ldquo, rdquo, lsquo, rsquo
 } from '../helpers/regex';
@@ -17,11 +17,7 @@ const punctuation = [
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
-      `${
-        space
-      }*(<[^<>]+>)(?=(${
-        space
-      }*<[^<>]+>)*${
+      `${space}*(${tag})(?=(${space}*${tag})*${
         space
       }*([?!;:.,)\\]]|${raquo}|${rsaquo}|${rdquo}|${rsquo}))`,
       'g'

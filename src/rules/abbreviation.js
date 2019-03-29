@@ -1,4 +1,4 @@
-import {space} from '../helpers/regex';
+import {space, tag} from '../helpers/regex';
 
 const abbreviation = [
   {
@@ -99,13 +99,7 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC'
     ],
     pattern: new RegExp(
-      `${
-        space
-      }*(<[^<>]+>)(?=(${
-        space
-      }*<[^<>]+>)*${
-        space
-      }?(etc\\.))`,
+      `${space}*(${tag})(?=(${space}*${tag})*${space}?(etc\\.))`,
       'g'
     ),
     replacement: {
