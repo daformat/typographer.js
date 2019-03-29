@@ -101,9 +101,9 @@ const abbreviation = [
     pattern: new RegExp(
       `${
         space
-      }*(<[^>]+>)(?=(${
+      }*(<[^<>]+>)(?=(${
         space
-      }*<[^>]+>)*${
+      }*<[^<>]+>)*${
         space
       }?(etc\\.))`,
       'g'

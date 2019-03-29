@@ -19,7 +19,7 @@ const punctuation = [
         space
       }*(<[^<>]+>)(?=(${
         space
-      }*<[^>]+>)*${
+      }*<[^<>]+>)*${
         space
       }*([?!;:.,)\\]]|${raquo}|${rsaquo}|${rdquo}|${rsquo}))`,
       'g'
