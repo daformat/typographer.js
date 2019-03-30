@@ -74,7 +74,9 @@ This can never be perfect and there’s a lot of cases where typographer will st
 
 We'll add a non-breaking space on units which we're pretty sure of, and will leave it up to you to do it for ambiguous ones.
 
-You should avoid using html input (wether a HTML Element or a html string) unless you are pretty confident about how your input is structured. Indeed [regexes can never be perfect for parsing HTML](https://stackoverflow.com/a/1732454/). For instance, if you use inline styles in your input with a locale that requires non-breaking spaces (either narrow or regular) before colons or semicolons, typographer will mess your styles up, leaving you wondering why your styles are not applied.
+You should avoid using html input (wether a HTML Element or a html string) unless you are pretty confident about how your input is structured. Indeed [regexes can never be perfect for parsing HTML](https://stackoverflow.com/a/1732454/). For instance, if you use inline styles in your input **with a locale that requires non-breaking spaces** (either narrow or regular) **before colons or semicolons**, typographer will mess your styles up, leaving you wondering why your styles are not applied.
+
+If your input html is only made of straight tags (without any attributes), it should be safe to use.
 
 ## Different countries, different typographic rules
 
