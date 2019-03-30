@@ -1,6 +1,6 @@
 // Full (hopefully) regex for both textual and html entities spaces:
 export const space = '(?:\\s|&#x20;|&#32;|&thinsp;|&#x2009;|&#8201;|&#x200a;|&#8202;|&#x205f;|&#8287;|&#x1680;|&#5760;|&#x2000;|&#8192;|&#x2001;|&#8193;|&ensp;|&#x2002;|&#8194;|&emsp;|&#x2003;|&#8195;|&#x2004;|&#8196;|&#x2005;|&#8197;|&#x2006;|&#8198;|&nbsp;|&#xa0;|&#160;|&#x202f;|&#8239;|&#x2007;|&#8199;|&#x2008;|&#8200;|&#x3000;|&#12288;|&#xfeff;|&#65279;|&Tab;|&#x9;|&#9;|&#xb;|&#11;)';
-// HE'S COMING - https://stackoverflow.com/a/1732454
+// HE'S COMING - https://stackoverflow.com/a/1732454 - regex adapted from https://haacked.com/archive/2004/10/25/usingregularexpressionstomatchhtml.aspx/
 export const tag = '</?\\w+(?:(?:\\s+\\w+(?:-\\w+)*(?:\\s*=\\s*(?:".*?"|\'.*?\'|[^\'">\\s]+))?)+\\s*|\\s*)/?>';
 
 export const laquo = '(?:«|&laquo;|&#[xX]0{0,}[aA][bB];|&#0{0,}171;)';
