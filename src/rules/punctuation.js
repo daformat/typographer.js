@@ -37,12 +37,31 @@ const punctuation = [
       'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
     ],
     pattern: new RegExp(
-      `(?<!(${space}\\.){1,2})${space}+\\.(?!(${space}\\.){1,2})`,
+      `${space}+\\.(?!(${space}\\.){1,2})`,
       'g'
     ),
     replacement: {
       text: '.',
       html: '.'
+    }
+  },
+  {
+    // remove space(s) before periods, except within ellipsis
+    // part 2 restore spaced ellipsis
+    name: 'no-space-before-period',
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
+      'en', 'en_US', 'en_GB', 'en_CA', 'en_AU', 'en_NZ', 'en_IN',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE',
+      'de', 'de_DE', 'de_AT', 'de_BE', 'de_CH', 'de_LI', 'de_LU'
+    ],
+    pattern: new RegExp(
+      `(${space}*\\.${space}+\\.)\\.`,
+      'g'
+    ),
+    replacement: {
+      text: '$1 .',
+      html: '$1 .'
     }
   },
   {
