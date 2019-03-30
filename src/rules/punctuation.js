@@ -155,12 +155,30 @@ const punctuation = [
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
     pattern: new RegExp(
-      `${space}*(?<!&#?\\w+);`,
+      `${space}*;`,
       'g'
     ),
     replacement: {
       text: '\u202f;',
       html: '&#8239;;'
+    }
+  },
+  {
+    // replace any amount of space(s) before a semicolon
+    // with a narrow non-breaking space
+    // Part 2, restore html entities
+    name: 'narrow-nbsp-before-semicolon',
+    locales: [
+      'fr', 'fr_FR', 'fr_BE', 'fr_CH',
+      'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
+    ],
+    pattern: new RegExp(
+      `(&#?\\w+)(?:\u202f|&#8239;);`,
+      'g'
+    ),
+    replacement: {
+      text: '$1;',
+      html: '$1;'
     }
   },
   {
