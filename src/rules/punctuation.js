@@ -141,7 +141,7 @@ const punctuation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC'
     ],
     pattern: new RegExp(
-      `${space}*:`,
+      `(?!^)${space}*:`,
       'g'
     ),
     replacement: {
@@ -174,7 +174,7 @@ const punctuation = [
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
     pattern: new RegExp(
-      `${space}*;`,
+      `(?!^)${space}*;`,
       'g'
     ),
     replacement: {
@@ -248,7 +248,7 @@ const punctuation = [
       'es', 'es_ES', 'es_AR', 'es_BO', 'es_CL', 'es_CO', 'es_CR', 'es_DO', 'es_EC', 'es_SV', 'es_GT', 'es_HN', 'es_MX', 'es_NI', 'es_PA', 'es_PY', 'es_PE', 'es_PR', 'es_UY', 'es_US', 'es_VE'
     ],
     pattern: new RegExp(
-      `${space}*([?!])`,
+      `(?!^)${space}*([?!])`,
       'g'
     ),
     replacement: {
