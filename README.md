@@ -21,7 +21,7 @@ typographer(input, configuration);
 `configuration` is an object with the following optional properties:
 - `locale`: the language code to use. Default is `en`.
 - `output_format`: either `text` or `html`, format used for replacements (e.g. `\u00a0` or `&nbsp;` for non-breaking spaces). Default is `text`.
-- `disable_rules`: array of rules to disable (e.g `['ruleset/name1', 'ruleset2/name2', ...]`).
+- `disable_rules`: array of rules/rulesets to disable (e.g `['ruleset/name1', 'ruleset2/name2', 'ruleset3', ...]`).
 
 **Depending on the input type**, typographer will either return a string (when using a string input), or update the element and its descendants directly in the DOM.
 
