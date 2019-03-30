@@ -18,7 +18,7 @@ Typography is an art, as much as a science, that has been refined over the cours
 typographer(input, configuration);
 ```
 
-`input` is a string **or** an HTML element.
+`input` is a string **or** an HTML element (see [limitations](#limitations) about html input).
 
 `configuration` is an object with the following optional properties:
 - `locale`: the language code to use. Default is `en`.
