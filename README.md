@@ -72,9 +72,11 @@ Consider `451 °F`, wouldn’t it be weird to have the unit on a separate line
 
 ## Limitations
 
-This can never be perfect, for instance, the International System of Units specifies that the units should be preceded by a space (a non-breaking one), but it's rather difficult to make sure something is a unit. Some units can be very ambiguous (e.g. V for Volt, can also be the roman numeral for 5).
+This can never be perfect and there’s a lot of cases where typographer will struggle, for instance, the International System of Units specifies that the units should be preceded by a space (a non-breaking one), but it's rather difficult to make sure something is a unit. Some units can be very ambiguous (e.g. V for Volt, can also be the roman numeral for 5).
 
 We'll add a non-breaking space on units which we're pretty sure of. And will leave it to you to do it for ambiguous ones.
+
+You should avoid using html input (wether a HTML Element or a html string) unless you are pretty confident about what your input is made of.
 
 ## Different countries, different typographic rules
 
