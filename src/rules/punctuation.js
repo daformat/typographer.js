@@ -277,6 +277,9 @@ const punctuation = [
     // narrow-nbsp-before-interrogation-exclamation rule
     // TODO: find a way to improve the aforementionned rule
     // so it doesn't match on html comments.
+    // NOTE: We may want to rename this rule using the same name
+    // (`narrow-nbsp-before-interrogation-exclamation`)
+    // so it is only applied when the first rule is enabled
     name: 'restore-html-comments',
     locales: [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC',
