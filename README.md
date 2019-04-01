@@ -76,7 +76,7 @@ We'll add a non-breaking space on units which we're pretty sure of, and will le
 
 If you use an html **string** input with a locale that requires non-breaking spaces (regular or narrow) before punctuation signs, you should make sure your string doesn’t contain any tags that shouldn't be transformed, like `<code>` or `<style>` for example. Otherwise you'll end up with things like `color&nbsp;: red&#8239;;` which would break your styling or code samples.
 
-Using an html **element** input is safe since we filter out nodes that should not be transformed like the aforementionned ones (and others). Note that if an element within you input contains some of those node types, we will skip the whole container element.
+Using an html **element** input is safe since we filter out nodes that should not be transformed like the aforementionned ones (and others). Note that if an element within your input contains some of those node types, we will skip the whole container element.
 
 We try our best to automatically fix as much as we can, but the first-rule of typographer is: “When in doubt, leave things as they are.”
 
