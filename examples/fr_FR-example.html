@@ -44,7 +44,7 @@
   <!-- Ceci est un commentaire -->
   <div id="original">
     <!-- Titre de la page -->
-    <h1>Bonjour typographer !</h1>
+    <h1 onclick="console.log('clicked!');alert('Clicked!');">Bonjour typographer !</h1>
     <!-- Contenu -->
     <p>Il faut le dire: la typographie sur internet est aujourd’hui <b>largement malmenée</b> ...</p>
     <p>C’est le moins <em>que l’on <b>puisse dire </b>  </em>    ! Certaines «erreurs» sont liées à la méthode de saisie : il est en effet difficile de saisir des «espaces insecables» , encore plus des «espaces ‹fines› insécables»  !</p>
@@ -84,7 +84,7 @@
       Ou, tous deux, je vous remplace !
     </p>
 
-    <h2>Maupassant, <em>Saint-Antoine</em></h2>
+    <h2>Maupassant, <em style="color: #999;">Saint-Antoine</em></h2>
     <p>
       C’était un grand paysan du pays de Caux, haut en couleur, gros de poitrine et de ventre, et perché sur de longues jambes qui semblaient trop maigres pour l’ampleur du corps.
     </p>
@@ -94,6 +94,7 @@
     <p>
       Lorsqu’arriva l’invasion prussienne, Saint-Antoine, au cabaret, promettait de manger une armée, car il était hâbleur comme un vrai Normand, un peu couard et fanfaron. Il tapait du poing sur la table de bois, qui sautait en faisant danser les tasses et les petits verres, et il criait, la face rouge et l’oeil sournois, dans une fausse colère de bon vivant : « Faudra que j’en mange, nom de Dieu ! » Il comptait bien que les Prussiens ne viendraient pas jusqu’à Tanneville ; mais lorsqu’il apprit qu’ils étaient à Rautôt, il ne sortit plus de sa maison, et il guettait sans cesse la route par la petite fenêtre de sa cuisine, s’attendant à tout moment à voir passer des baïonnettes.
     </p>
+
     <!-- Exemple de code -->
     <h2>Le code informatique doit être inchangé</h2>
     <pre>
@@ -101,6 +102,9 @@
       const hello = 'typographer';
       console.log(hello);
     </pre>
+    <style>
+      p.dummy {background-color: inherit;}
+    </style>
   </div>
   <div id="typographer">
   </div>
