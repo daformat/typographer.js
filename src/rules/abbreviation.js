@@ -1,4 +1,4 @@
-import {space, tag} from '../helpers/regex';
+import {space, tag, opening_tag} from '../helpers/regex';
 
 const abbreviation = [
   {
@@ -23,12 +23,12 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC'
     ],
     pattern: new RegExp(
-      `\\b1${space}*<sup( [^>]*)?>[èe]re</sup>`,
+      `\\b1${space}*(${opening_tag('sup')})[èe]re</sup>`,
       'gi'
     ),
     replacement: {
-      text: '1<sup$1>re</sup>',
-      html: '1<sup$1>re</sup>'
+      text: '1$1re</sup>',
+      html: '1$1re</sup>'
     }
   },
   {
@@ -53,12 +53,12 @@ const abbreviation = [
       'fr', 'fr_FR', 'fr_BE', 'fr_CA', 'fr_CH', 'fr_LU', 'fr_MC'
     ],
     pattern: new RegExp(
-      `\\b(\\d+)${space}*<sup( [^>]*)?>[èe]me</sup>`,
+      `\\b(\\d+)${space}*(${opening_tag('sup')})[èe]me</sup>`,
       'gi'
     ),
     replacement: {
-      text: '$1<sup$2>e</sup>',
-      html: '$1<sup$2>e</sup>'
+      text: '$1$2e</sup>',
+      html: '$1$2e</sup>'
     }
   },
   {
