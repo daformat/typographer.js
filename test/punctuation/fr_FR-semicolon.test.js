@@ -102,3 +102,15 @@ test('[html] Properly deal with html for semicolon', () => {
     )
   ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>&#8239;;')
 });
+
+test('[html] Does not apply rule to inline-styles', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b style="color: red;">typographer </b> </em> </u>;',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b style="color: red;">typographer</b></em></u>&#8239;;')
+});

@@ -103,3 +103,16 @@ test('[html] Properly deal with html for colon', () => {
     )
   ).toBe('<u>Bonjour <em>mon cher <b>typographer</b></em></u>&nbsp;: enchanté <b>de faire votre connaissance</b>')
 });
+
+test('[html] Doesn’t apply rule to inline styles', () => {
+  expect(
+    typographer(
+      '<u>Bonjour <em>mon cher <b style="color: red">typographer </b> </em> </u>: enchanté <b>de faire votre connaissance</b>',
+      {
+        locale: 'fr_FR',
+        output_format: 'html',
+        disable_rules: ['composition/no-orphan-short-words']
+      }
+    )
+  ).toBe('<u>Bonjour <em>mon cher <b style="color: red">typographer</b></em></u>&nbsp;: enchanté <b>de faire votre connaissance</b>')
+});
