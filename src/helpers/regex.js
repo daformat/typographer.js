@@ -10,7 +10,10 @@ export const opening_tag = tag_name => (
 );
 
 // This is far from being perfect but it does prevent transforming things within tag attributes values. Unfortunately it also prevents transforming things like the colon in: `<p>Hello color: red" attr ></p>` because the right part up to the closing </p> looks like what would be within a html tag - But it's better not to transform those than to transform what could be part of an html tag and mess up inline styles, scripts, or whatever.
-export const not_in_tag_attribute_value = what => (`(?!<\\w+(?:(?:\\s+\\w+(?:-\\w+)*(?:\\s*=\\s*(?:".*?"|'.*?'|[^'">\\s]+))?)+\\s*|\\s*))${what}(?!.*?["'](?:(?:\\s+\\w+(?:-\\w+)*(?:\\s*=\\s*(?:".*?"|'.*?'|[^'">\\s]+))?)+\\s*|\\s*)/?>)`);
+// const part_before = `(?!<\\w+(?:(?:\\s+${tag_attribute})+\\s*|\\s*)(?:(?:\\s+\\w+(?:-\\w+)*(?:\\s*=\\s*(?:".*?|'.*?))?)))`;
+export const not_in_tag_attribute_value = what => (
+  `${what}(?!.*?["'](?:(?:\\s+${tag_attribute})+\\s*|\\s*)/?>)`
+);
 
 export const laquo = '(?:«|&laquo;|&#[xX]0{0,}[aA][bB];|&#0{0,}171;)';
 export const raquo = '(?:»|&raquo;|&#[xX]0{0,}[bB][bB];|&#0{0,}187;)';
