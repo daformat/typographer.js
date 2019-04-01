@@ -4,7 +4,7 @@ export const space = '(?:\\s|&#x20;|&#32;|&thinsp;|&#x2009;|&#8201;|&#x200a;|&#8
 // HE'S COMING - https://stackoverflow.com/a/1732454 - regex adapted from https://haacked.com/archive/2004/10/25/usingregularexpressionstomatchhtml.aspx/
 export const tag = '</?\\w+(?:(?:\\s+\\w+(?:-\\w+)*(?:\\s*=\\s*(?:".*?"|\'.*?\'|[^\'">\\s]+))?)+\\s*|\\s*)/?>';
 
-// This is far from being perfect but it does prevent transforming things within tag attributes values. Unfortunately it also prevents transforming things like the colon in: `<p>Hello color: red" attr ></p>` because the right part up to the closing </p> looks like what would be within a html tag - But it's better not to transform those than to transform what could be part of an html tag and mess up inline styles.
+// This is far from being perfect but it does prevent transforming things within tag attributes values. Unfortunately it also prevents transforming things like the colon in: `<p>Hello color: red" attr ></p>` because the right part up to the closing </p> looks like what would be within a html tag - But it's better not to transform those than to transform what could be part of an html tag and mess up inline styles, scripts, or whatever.
 export const not_in_tag_attribute_value = what => (`(?!<\\w+(?:(?:\\s+\\w+(?:-\\w+)*(?:\\s*=\\s*(?:".*?"|'.*?'|[^'">\\s]+))?)+\\s*|\\s*))${what}(?!.*?["'](?:(?:\\s+\\w+(?:-\\w+)*(?:\\s*=\\s*(?:".*?"|'.*?'|[^'">\\s]+))?)+\\s*|\\s*)/?>)`);
 
 export const laquo = '(?:«|&laquo;|&#[xX]0{0,}[aA][bB];|&#0{0,}171;)';
