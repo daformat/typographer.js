@@ -305,7 +305,7 @@ const punctuation = [
     ],
     pattern: new RegExp(
       `(${laquo})${space}*(.*?)${space}*(${raquo})`,
-      'g'
+      'gs'
     ),
     replacement: {
       text: '$1\u202f$2\u202f$3',
@@ -323,7 +323,7 @@ const punctuation = [
     ],
     pattern: new RegExp(
       `(${lsaquo})${space}*(.*?)${space}*(${rsaquo})`,
-      'g'
+      'gs'
     ),
     replacement: {
       text: '$1\u202f$2\u202f$3',
@@ -341,7 +341,7 @@ const punctuation = [
     ],
     pattern: new RegExp(
       `(${ldquo})${space}*(.*?)${space}*(${rdquo})`,
-      'g'
+      'gs'
     ),
     replacement: {
       text: '$1$2$3',
@@ -359,7 +359,7 @@ const punctuation = [
     ],
     pattern: new RegExp(
       `(${lsquo})${space}*(.*?)${space}*(${rsquo})`,
-      'g'
+      'gs'
     ),
     replacement: {
       text: '$1$2$3',
@@ -377,7 +377,7 @@ const punctuation = [
     ],
     pattern: new RegExp(
       `(\\()${space}*(.*?)${space}*(\\))`,
-      'g'
+      'gs'
     ),
     replacement: {
       text: '$1$2$3',
@@ -395,7 +395,7 @@ const punctuation = [
     ],
     pattern: new RegExp(
       `(\\[)${space}*(.*?)${space}*(\\])`,
-      'g'
+      'gs'
     ),
     replacement: {
       text: '$1$2$3',
